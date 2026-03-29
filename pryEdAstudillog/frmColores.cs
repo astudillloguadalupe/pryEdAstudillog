@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace pryEdAstudillog
 {
-    public partial class frmMeses : Form
+    public partial class frmColores : Form
     {
-        public frmMeses()
+        public frmColores()
         {
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnGrabar_Click(object sender, EventArgs e)
         {
 
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "")
+            if(txtNombre.Text == "")
             {
                 btnListar.Enabled = false;
             }
@@ -47,6 +47,8 @@ namespace pryEdAstudillog
             {
                 btnGrabar.Enabled = true;
             }
+
+
         }
     }
 }

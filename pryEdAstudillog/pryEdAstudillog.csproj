@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnos.Designer.cs">
+      <DependentUpon>frmAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmColores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColores.Designer.cs">
+      <DependentUpon>frmColores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDatosDelDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +84,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAlumnos.resx">
+      <DependentUpon>frmAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColores.resx">
+      <DependentUpon>frmColores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDatosDelDesarrollador.resx">
       <DependentUpon>frmDatosDelDesarrollador.cs</DependentUpon>
     </EmbeddedResource>

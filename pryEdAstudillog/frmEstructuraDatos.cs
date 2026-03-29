@@ -37,5 +37,21 @@ namespace pryEdAstudillog
         {
             frmMeses v = new frmMeses(); v.ShowDialog();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientes v = new frmClientes();
+            v.ShowDialog();
+        }
+
+        private void coloresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmColores v = new frmColores(); v.ShowDialog();
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumnos v = new frmAlumnos(); v.ShowDialog();    
+        }
     }
 }
