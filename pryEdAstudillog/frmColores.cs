@@ -19,7 +19,15 @@ namespace pryEdAstudillog
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Colores.txt"; //csv excel
 
+            x.Grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
+
+            MessageBox.Show("Datos Grabados");
+
+            txtNombre.Text = "";
         }
 
         private void btnListar_Click(object sender, EventArgs e)
