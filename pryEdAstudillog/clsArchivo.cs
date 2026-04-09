@@ -5,38 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 //Crear una libreria
 using System.IO; //permite trabajar con archivos
-using System.Windows.Forms; //permite usar controles gráficos como ListBox, ComboBox, botones, etc.
+using System.Windows.Forms;
+using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
 
 namespace pryEdAstudillog
 {
     internal class clsArchivo
     {
         //Creamos un campo
-        public String NomArchivo = "Colores.txt"; //guarda el nombre del archivo.
+        public String NomArchivo = "Colores.txt"; 
 
         public void Grabar()
         {
             //Abrimos archivo de escritura
-            StreamWriter AD = new StreamWriter(NomArchivo); //Abre el archivo para escribir. Si el archivo no existe, lo crea. Si el archivo ya existe, lo sobrescribe.
-            AD.WriteLine("Hola"); //Escribe una línea en el archivo.
+            StreamWriter AD = new StreamWriter(NomArchivo); 
+            AD.WriteLine("Hola"); 
             AD.Close();
         }
         public void Grabar(String Dato)
         {
             //Abrimos archivo de lectura
-            StreamWriter AD = new StreamWriter(NomArchivo, true); //true agregar sin borrar lo anterior
+            StreamWriter AD = new StreamWriter(NomArchivo, true); 
             AD.WriteLine(Dato);
             AD.Close();
 
         }
-        public void Recorrer(ListBox lstDatos) //Leer el archivo, Mostrar los datos en un ListBox
+        public void Recorrer(ListBox lstDatos) 
         {
-            lstDatos.Items.Clear(); //borra si hay algo escrito en el listbox, para mostrar solo lo que hay en el archivo
-            String DatoLeido = ""; // se guarda cada línea leída.
-            StreamReader AD = new StreamReader(NomArchivo); //Abre el archivo para lectura.
-            DatoLeido = AD.ReadLine(); //lee la primera línea del archivo y la guarda en DatoLeido
+            lstDatos.Items.Clear(); 
+            String DatoLeido = ""; 
+            StreamReader AD = new StreamReader(NomArchivo); 
+            DatoLeido = AD.ReadLine();
 
-            while (DatoLeido != null) //Mientras haya datos
+            while (DatoLeido != null) 
             {
                 //Agrega la línea al ListBox.
                 lstDatos.Items.Add(DatoLeido);
@@ -45,7 +47,7 @@ namespace pryEdAstudillog
             AD.Close();
         }
 
-        private void Recorrer(ComboBox cboDatos)
+        public void Recorrer(ComboBox cboDatos)
         {
             cboDatos.Items.Clear();
             String DatoLeido = "";
@@ -57,6 +59,26 @@ namespace pryEdAstudillog
                 DatoLeido = AD.ReadLine();
             }
             AD.Close();
+
+            
+        }
+        public void Borrar()
+        {
+            StreamWriter AD = new StreamWriter(NomArchivo,false);
+            AD.Close();
+        }
+
+        public void Grabar(String Dato1, String Dato2, String Dato3)
+        {
+            StreamWriter AD = new StreamWriter(NomArchivo, true);
+            AD.Write(Dato1);
+            AD.Write(";");
+            AD.Write(Dato2);
+            AD.Write(";");
+            AD.WriteLine(Dato3);
+            AD.Close();
+            
         }
     }
+
 }

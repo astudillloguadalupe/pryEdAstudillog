@@ -57,6 +57,11 @@ namespace pryEdAstudillog
                 btnGrabar.Enabled = false;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
 }

@@ -53,5 +53,13 @@ namespace pryEdAstudillog
         {
             frmAlumnos v = new frmAlumnos(); v.ShowDialog();    
         }
+
+        
+
+        private void carrerasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCarreras v = new frmCarreras(); v.ShowDialog();
+        }
     }
+
 }

@@ -48,5 +48,26 @@ namespace pryEdAstudillog
                 btnGrabar.Enabled = true;
             }
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo(); 
+            x.NomArchivo = "Meses.txt"; //csv excel 
+
+            x.Grabar(txtNombre.Text); 
+            x.Recorrer(lstMeses); 
+
+            MessageBox.Show("Datos Grabados");
+
+            txtNombre.Text = "";
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo carrera = new clsArchivo();
+            carrera.NomArchivo = "Meses.csv";
+            carrera.Borrar();
+            carrera.Recorrer(lstMeses);
+        }
     }
 }

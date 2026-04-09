@@ -57,5 +57,13 @@ namespace pryEdAstudillog
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Clientes.txt";
+            x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+           
+        }
     }
 }
