@@ -61,9 +61,14 @@ namespace pryEdAstudillog
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             clsArchivo x = new clsArchivo();
-            x.NomArchivo = "Clientes.txt";
+            x.NomArchivo = "Clientes.csv";
             x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
            
+        }
+
+        private void dtgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

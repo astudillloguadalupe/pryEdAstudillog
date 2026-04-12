@@ -19,6 +19,12 @@ namespace pryEdAstudillog
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           if (txtCarrera.Text == "")
+            {
+                MessageBox.Show("Ingrese una carrera");
+            }
+            
+
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Carrea.csv"; //csv excel 
 
@@ -33,6 +39,21 @@ namespace pryEdAstudillog
         private void lstCarreras_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+          
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Carrea.csv"; //csv excel
+            x.Borrar(); 
+            x.Recorrer(lstCarreras);
+            MessageBox.Show("Datos Borrados");
+        }
+
+        private void txtCarrera_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

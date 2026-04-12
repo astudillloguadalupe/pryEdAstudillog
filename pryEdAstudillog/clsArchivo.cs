@@ -14,15 +14,9 @@ namespace pryEdAstudillog
     internal class clsArchivo
     {
         //Creamos un campo
-        public String NomArchivo = "Colores.txt"; 
+        public String NomArchivo = ""; 
 
-        public void Grabar()
-        {
-            //Abrimos archivo de escritura
-            StreamWriter AD = new StreamWriter(NomArchivo); 
-            AD.WriteLine("Hola"); 
-            AD.Close();
-        }
+        
         public void Grabar(String Dato)
         {
             //Abrimos archivo de lectura

@@ -32,6 +32,7 @@
             this.lblCarreras = new System.Windows.Forms.Label();
             this.txtCarrera = new System.Windows.Forms.TextBox();
             this.lstCarreras = new System.Windows.Forms.ListBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -59,6 +60,7 @@
             this.txtCarrera.Name = "txtCarrera";
             this.txtCarrera.Size = new System.Drawing.Size(151, 20);
             this.txtCarrera.TabIndex = 2;
+            this.txtCarrera.TextChanged += new System.EventHandler(this.txtCarrera_TextChanged);
             // 
             // lstCarreras
             // 
@@ -69,11 +71,22 @@
             this.lstCarreras.TabIndex = 3;
             this.lstCarreras.SelectedIndexChanged += new System.EventHandler(this.lstCarreras_SelectedIndexChanged);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(12, 82);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 34);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 354);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstCarreras);
             this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.lblCarreras);
@@ -92,5 +105,6 @@
         private System.Windows.Forms.Label lblCarreras;
         private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.ListBox lstCarreras;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

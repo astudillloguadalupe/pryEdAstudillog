@@ -117,6 +117,7 @@
             this.dtgvClientes.Name = "dtgvClientes";
             this.dtgvClientes.Size = new System.Drawing.Size(359, 216);
             this.dtgvClientes.TabIndex = 7;
+            this.dtgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvClientes_CellContentClick);
             // 
             // Codigo
             // 
