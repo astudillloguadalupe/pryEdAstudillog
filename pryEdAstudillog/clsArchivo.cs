@@ -41,21 +41,7 @@ namespace pryEdAstudillog
             AD.Close();
         }
 
-        public void Recorrer(ComboBox cboDatos)
-        {
-            cboDatos.Items.Clear();
-            String DatoLeido = "";
-            StreamReader AD = new StreamReader(NomArchivo);
-            DatoLeido = AD.ReadLine();
-            while (DatoLeido != null)
-            {
-                cboDatos.Items.Add(DatoLeido);
-                DatoLeido = AD.ReadLine();
-            }
-            AD.Close();
-
-            
-        }
+       
         public void Borrar()
         {
             StreamWriter AD = new StreamWriter(NomArchivo,false);
@@ -72,7 +58,44 @@ namespace pryEdAstudillog
             AD.WriteLine(Dato3);
             AD.Close();
             
+
+
+
         }
+        public void Recorrer(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            String DatoLeido = "";
+            StreamReader AD = new StreamReader(NomArchivo);
+            DatoLeido = AD.ReadLine();
+
+            while (DatoLeido != null)
+            {
+                //Agrega la línea.
+                Grilla.Rows.Add(DatoLeido.Split(';'));
+                DatoLeido = AD.ReadLine();
+            }
+            AD.Close();
+        }
+
+        public void Recorrer(ComboBox cmbCarrera)
+        {
+            String DatoLeido;
+            cmbCarrera.Items.Clear();
+            StreamReader AD = new StreamReader(NomArchivo);
+            DatoLeido = AD.ReadLine();
+            while (DatoLeido != null)
+            {
+                cmbCarrera.Items.Add(DatoLeido);
+                DatoLeido = AD.ReadLine();
+            }
+            cmbCarrera.SelectedIndex = 0;
+            AD.Close();
+        }
+
+
+
+
     }
 
 }

@@ -63,6 +63,7 @@ namespace pryEdAstudillog
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Clientes.csv";
             x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
+            x.Recorrer(dtgvClientes);
             MessageBox.Show("Cliente guardado con exito");  
 
         }
@@ -77,8 +78,11 @@ namespace pryEdAstudillog
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Clientes.csv"; //csv excel
             x.Borrar();
-            //x.Recorrer();
+            x.Recorrer(dtgvClientes);
             MessageBox.Show("Datos Borrados");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtDeuda.Clear();
         }
     }
 }

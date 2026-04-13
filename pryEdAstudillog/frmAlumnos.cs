@@ -48,19 +48,43 @@ namespace pryEdAstudillog
 
         private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbCarrera.SelectedIndex != -1)
-            {
-                btnGrabar.Enabled = true;
-            }
-            else
+
+            if (cmbCarrera.Text == "")
             {
                 btnGrabar.Enabled = false;
             }
+            else
+            {
+                btnGrabar.Enabled = true;
+            }
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Alumnos.csv";
+            x.Grabar(txtCodigo.Text, txtNombre.Text, cmbCarrera.Text);
+            x.Recorrer(dgvAlumnos);
+            MessageBox.Show("Alumno guardado con exito");
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Alumnos.csv"; //csv excel
+            x.Borrar();
+            x.Recorrer(dgvAlumnos);
+            MessageBox.Show("Datos Borrados");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            cmbCarrera.SelectedIndex = -1;
         }
     }
     
