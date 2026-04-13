@@ -71,5 +71,14 @@ namespace pryEdAstudillog
         {
 
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Clientes.csv"; //csv excel
+            x.Borrar();
+            //x.Recorrer();
+            MessageBox.Show("Datos Borrados");
+        }
     }
 }
