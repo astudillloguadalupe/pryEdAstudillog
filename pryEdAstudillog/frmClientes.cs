@@ -63,7 +63,8 @@ namespace pryEdAstudillog
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Clientes.csv";
             x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
-           
+            MessageBox.Show("Cliente guardado con exito");  
+
         }
 
         private void dtgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
