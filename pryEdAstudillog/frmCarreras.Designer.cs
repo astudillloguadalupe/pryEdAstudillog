@@ -91,6 +91,7 @@
             this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.lblCarreras);
             this.Controls.Add(this.btnGuardar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmCarreras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carreras";

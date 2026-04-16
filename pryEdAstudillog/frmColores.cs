@@ -32,20 +32,12 @@ namespace pryEdAstudillog
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if(txtNombre.Text == "")
-            {
-                btnListar.Enabled = false;
-            }
-            else
-            {
-                btnListar.Enabled = true;
-
-            }
+           
 
             if (txtNombre.Text == "")
             {
@@ -57,6 +49,14 @@ namespace pryEdAstudillog
             }
 
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            clsArchivo colores = new clsArchivo();
+            colores.NomArchivo = "Colores.csv";
+            colores.Borrar();
+            colores.Recorrer(lstColores);
         }
     }
 }

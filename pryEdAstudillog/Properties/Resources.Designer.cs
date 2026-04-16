@@ -63,6 +63,16 @@ namespace pryEdAstudillog.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cola {
+            get {
+                object obj = ResourceManager.GetObject("cola", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2026_04_07_at_18_51_56 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2026-04-07 at 18.51.56", resourceCulture);

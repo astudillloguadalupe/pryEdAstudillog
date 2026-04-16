@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.lstColores = new System.Windows.Forms.ListBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnListar
-            // 
-            this.btnListar.Enabled = false;
-            this.btnListar.Location = new System.Drawing.Point(15, 86);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(109, 23);
-            this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // lblNombre
             // 
@@ -82,16 +71,26 @@
             this.lstColores.Size = new System.Drawing.Size(267, 147);
             this.lstColores.TabIndex = 6;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(30, 86);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(101, 23);
+            this.btnLimpiar.TabIndex = 7;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmColores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 349);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstColores);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.btnListar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmColores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -102,11 +101,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.ListBox lstColores;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

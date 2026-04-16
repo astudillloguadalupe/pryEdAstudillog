@@ -30,7 +30,6 @@
         {
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnListar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.lstMeses = new System.Windows.Forms.ListBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -52,17 +51,6 @@
             this.txtNombre.Size = new System.Drawing.Size(243, 20);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
-            // 
-            // btnListar
-            // 
-            this.btnListar.Enabled = false;
-            this.btnListar.Location = new System.Drawing.Point(118, 85);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(92, 23);
-            this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnGrabar
             // 
@@ -86,7 +74,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(15, 85);
+            this.btnLimpiar.Location = new System.Drawing.Point(137, 85);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 5;
@@ -102,7 +90,6 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lstMeses);
             this.Controls.Add(this.btnGrabar);
-            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -118,7 +105,6 @@
 
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.ListBox lstMeses;
         private System.Windows.Forms.Button btnLimpiar;

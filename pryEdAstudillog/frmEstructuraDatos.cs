@@ -60,6 +60,11 @@ namespace pryEdAstudillog
         {
             frmCarreras v = new frmCarreras(); v.ShowDialog();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCola v = new frmCola(); v.ShowDialog();
+        }
     }
 
 }

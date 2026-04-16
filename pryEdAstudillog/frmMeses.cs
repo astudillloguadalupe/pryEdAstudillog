@@ -29,16 +29,7 @@ namespace pryEdAstudillog
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "")
-            {
-                btnListar.Enabled = false;
-            }
-            else
-            {
-                btnListar.Enabled = true;
-
-            }
-
+            
             if (txtNombre.Text == "")
             {
                 btnGrabar.Enabled = false;
@@ -64,10 +55,10 @@ namespace pryEdAstudillog
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            clsArchivo carrera = new clsArchivo();
-            carrera.NomArchivo = "Meses.csv";
-            carrera.Borrar();
-            carrera.Recorrer(lstMeses);
+            clsArchivo meses = new clsArchivo();
+            meses.NomArchivo = "Meses.csv";
+            meses.Borrar();
+            meses.Recorrer(lstMeses);
         }
     }
 }

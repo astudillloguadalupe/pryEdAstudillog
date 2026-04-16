@@ -21,12 +21,16 @@ namespace pryEdAstudillog
         {
            if (txtCarrera.Text == "")
             {
-                MessageBox.Show("Ingrese una carrera");
-            }
-            
+                btnGuardar.Enabled = false;
 
-            clsArchivo x = new clsArchivo();
-            x.NomArchivo = "Carrea.csv"; //csv excel 
+            }
+           else
+            {
+                btnGuardar.Enabled = true;
+            }
+
+                clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Carrera.csv"; //csv excel 
 
             x.Grabar(txtCarrera.Text);
             x.Recorrer(lstCarreras);
@@ -45,7 +49,7 @@ namespace pryEdAstudillog
         {
           
             clsArchivo x = new clsArchivo();
-            x.NomArchivo = "Carrea.csv"; //csv excel
+            x.NomArchivo = "Carrera.csv"; //csv excel
             x.Borrar(); 
             x.Recorrer(lstCarreras);
             MessageBox.Show("Datos Borrados");
