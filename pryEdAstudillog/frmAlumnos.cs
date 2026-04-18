@@ -73,10 +73,20 @@ namespace pryEdAstudillog
             x.Grabar(txtCodigo.Text, txtNombre.Text, cmbCarrera.Text);
             x.Recorrer(dgvAlumnos);
             MessageBox.Show("Alumno guardado con exito");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            cmbCarrera.SelectedIndex = -1;
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+
+            if (dgvAlumnos.Rows.Count == 1 && dgvAlumnos.Rows[0].IsNewRow)
+            {
+                MessageBox.Show("No hay Alumnos cargados para borrar");
+                return;
+            }
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Alumnos.csv"; //csv excel
             x.Borrar();

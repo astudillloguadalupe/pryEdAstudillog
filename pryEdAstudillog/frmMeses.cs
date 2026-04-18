@@ -55,10 +55,16 @@ namespace pryEdAstudillog
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            if (lstMeses.Items.Count == 0)
+            {
+                MessageBox.Show("No hay Meses Cargados para borrar");
+                return;
+            }
             clsArchivo meses = new clsArchivo();
             meses.NomArchivo = "Meses.csv";
             meses.Borrar();
             meses.Recorrer(lstMeses);
+            MessageBox.Show("Datos Borrados");
         }
     }
 }

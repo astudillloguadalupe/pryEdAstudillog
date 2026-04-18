@@ -64,7 +64,10 @@ namespace pryEdAstudillog
             x.NomArchivo = "Clientes.csv";
             x.Grabar(txtCodigo.Text, txtNombre.Text, txtDeuda.Text);
             x.Recorrer(dtgvClientes);
-            MessageBox.Show("Cliente guardado con exito");  
+            MessageBox.Show("Cliente guardado con exito");
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtDeuda.Clear();
 
         }
 
@@ -75,11 +78,19 @@ namespace pryEdAstudillog
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            if(dtgvClientes.Rows.Count == 1 && dtgvClientes.Rows[0].IsNewRow) //Validacion si hay datos cargados
+    {
+                MessageBox.Show("No hay clientes cargados para borrar");
+                return;
+            }
+
             clsArchivo x = new clsArchivo();
-            x.NomArchivo = "Clientes.csv"; //csv excel
+            x.NomArchivo = "Clientes.csv";
             x.Borrar();
             x.Recorrer(dtgvClientes);
-            MessageBox.Show("Datos Borrados");
+
+            MessageBox.Show("Datos borrados");
+
             txtCodigo.Clear();
             txtNombre.Clear();
             txtDeuda.Clear();

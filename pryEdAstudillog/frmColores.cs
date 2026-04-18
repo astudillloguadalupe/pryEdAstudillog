@@ -53,10 +53,17 @@ namespace pryEdAstudillog
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            if (lstColores.Items.Count == 0)
+            {
+                MessageBox.Show("No hay Colores Cargados para borrar");
+                return;
+            }
             clsArchivo colores = new clsArchivo();
             colores.NomArchivo = "Colores.csv";
             colores.Borrar();
             colores.Recorrer(lstColores);
+            MessageBox.Show("Datos Borrados");
+
         }
     }
 }

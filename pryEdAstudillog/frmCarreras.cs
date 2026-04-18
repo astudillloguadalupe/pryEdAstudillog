@@ -19,15 +19,6 @@ namespace pryEdAstudillog
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-           if (txtCarrera.Text == "")
-            {
-                btnGuardar.Enabled = false;
-
-            }
-           else
-            {
-                btnGuardar.Enabled = true;
-            }
 
                 clsArchivo x = new clsArchivo();
             x.NomArchivo = "Carrera.csv"; //csv excel 
@@ -47,7 +38,13 @@ namespace pryEdAstudillog
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-          
+            if (lstCarreras.Items.Count ==0)
+            {
+                MessageBox.Show("No hay Carreras Cargados para borrar");
+                return;
+            }
+
+           
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Carrera.csv"; //csv excel
             x.Borrar(); 
@@ -57,7 +54,19 @@ namespace pryEdAstudillog
 
         private void txtCarrera_TextChanged(object sender, EventArgs e)
         {
-            
+            if (txtCarrera.Text == "" )
+            {
+                btnGuardar.Enabled=false;
+            }
+            else
+            {
+                btnGuardar.Enabled = true;
+            }
+        }
+
+        private void frmCarreras_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
