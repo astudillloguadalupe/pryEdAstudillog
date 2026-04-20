@@ -80,17 +80,23 @@ namespace pryEdAstudillog
 
         public void Recorrer(ComboBox cmbCarrera)
         {
-            String DatoLeido;
             cmbCarrera.Items.Clear();
-            StreamReader AD = new StreamReader(NomArchivo);
-            DatoLeido = AD.ReadLine();
-            while (DatoLeido != null)
+
+            if (!File.Exists(NomArchivo)) return;
+
+            using (StreamReader AD = new StreamReader(NomArchivo))
             {
-                cmbCarrera.Items.Add(DatoLeido);
-                DatoLeido = AD.ReadLine();
+                string DatoLeido;
+                while ((DatoLeido = AD.ReadLine()) != null)
+                {
+                    cmbCarrera.Items.Add(DatoLeido);
+                }
             }
-            cmbCarrera.SelectedIndex = 0;
-            AD.Close();
+
+            if (cmbCarrera.Items.Count > 0)
+            {
+                cmbCarrera  .SelectedIndex = 0;
+            }
         }
 
 

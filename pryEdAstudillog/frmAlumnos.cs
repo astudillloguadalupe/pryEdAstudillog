@@ -19,7 +19,8 @@ namespace pryEdAstudillog
 
         private void frmAlumnos_Load(object sender, EventArgs e)
         {
-
+            CargarCarreras();
+             
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
@@ -45,6 +46,14 @@ namespace pryEdAstudillog
                 cmbCarrera.Enabled = true;
             }
         }
+
+        public void CargarCarreras()
+        {
+            clsArchivo x = new clsArchivo();   
+            x.NomArchivo = "Carreras.csv";
+            x.Recorrer(cmbCarrera);
+        }
+
 
         private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
         {

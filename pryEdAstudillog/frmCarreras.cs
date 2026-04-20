@@ -19,16 +19,25 @@ namespace pryEdAstudillog
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-                clsArchivo x = new clsArchivo();
-            x.NomArchivo = "Carrera.csv"; //csv excel 
+           
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Carreras.csv";
 
             x.Grabar(txtCarrera.Text);
             x.Recorrer(lstCarreras);
 
             MessageBox.Show("Datos Grabados");
 
-            txtCarrera.Text = "";
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is frmAlumnos)
+                {
+                    ((frmAlumnos)f).CargarCarreras();
+                }
+            }
+
+            txtCarrera.Clear();
+        
         }
 
         private void lstCarreras_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,7 +75,9 @@ namespace pryEdAstudillog
 
         private void frmCarreras_Load(object sender, EventArgs e)
         {
-
+            clsArchivo x = new clsArchivo();
+            x.NomArchivo = "Carreras.csv";
+            x.Recorrer(lstCarreras);
         }
     }
 }
