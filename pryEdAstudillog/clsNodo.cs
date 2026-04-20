@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO; //permite trabajar con archivos
+using System.Windows.Forms;
 
 namespace pryEdAstudillog
 {
@@ -15,28 +17,21 @@ namespace pryEdAstudillog
         private clsNodo sig;
 
 
-
-
         public Int32 Codigo
         { 
             get { return cod; } 
             set { cod = value; } 
-
         }
-
-
         public String Nombre 
         { 
             get { return nom; } 
             set { nom = value; } 
         }
-         public String Tramite 
-         { 
+        public String Tramite 
+        { 
             get { return tram; } 
             set { tram = value; } 
-
-         }
-
+        }
         public clsNodo Siguiente 
         { 
             get { return sig; } 
@@ -44,7 +39,5 @@ namespace pryEdAstudillog
         }
 
     }
-
-        
 
 }
