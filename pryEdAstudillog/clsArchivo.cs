@@ -27,18 +27,29 @@ namespace pryEdAstudillog
         }
         public void Recorrer(ListBox lstDatos) 
         {
-            lstDatos.Items.Clear(); 
-            String DatoLeido = ""; 
-            StreamReader AD = new StreamReader(NomArchivo); 
-            DatoLeido = AD.ReadLine();
+            lstDatos.Items.Clear();
 
-            while (DatoLeido != null) 
+            if (string.IsNullOrEmpty(NomArchivo))
             {
-                //Agrega la línea al ListBox.
-                lstDatos.Items.Add(DatoLeido);
-                DatoLeido = AD.ReadLine();
+                MessageBox.Show("Error: nombre de archivo vacío");
+                return;
             }
-            AD.Close();
+
+            if (!File.Exists(NomArchivo))
+            {
+                File.Create(NomArchivo).Close();
+                return;
+            }
+
+            using (StreamReader AD = new StreamReader(NomArchivo))
+            {
+                string DatoLeido;
+
+                while ((DatoLeido = AD.ReadLine()) != null)
+                {
+                    lstDatos.Items.Add(DatoLeido);
+                }
+            }
         }
 
        
@@ -50,15 +61,14 @@ namespace pryEdAstudillog
 
         public void Grabar(String Dato1, String Dato2, String Dato3)
         {
-            StreamWriter AD = new StreamWriter(NomArchivo, true);
-            AD.Write(Dato1);
-            AD.Write(";");
-            AD.Write(Dato2);
-            AD.Write(";");
-            AD.WriteLine(Dato3);
-            AD.Close();
-            
-
+            using (StreamWriter AD = new StreamWriter(NomArchivo, true))
+            {
+                AD.Write(Dato1);
+                AD.Write(";");
+                AD.Write(Dato2);
+                AD.Write(";");
+                AD.WriteLine(Dato3);
+            }
 
 
         }
@@ -82,25 +92,29 @@ namespace pryEdAstudillog
         {
             cmbCarrera.Items.Clear();
 
-            if (!File.Exists(NomArchivo)) return;
+            if (string.IsNullOrEmpty(NomArchivo)) return;
+
+            if (!File.Exists(NomArchivo))
+            {
+                File.Create(NomArchivo).Close();
+                return;
+            }
 
             using (StreamReader AD = new StreamReader(NomArchivo))
             {
                 string DatoLeido;
+
                 while ((DatoLeido = AD.ReadLine()) != null)
                 {
                     cmbCarrera.Items.Add(DatoLeido);
                 }
             }
 
-            if (cmbCarrera.Items.Count > 0)
+            if (cmbCarrera .Items.Count > 0)
             {
-                cmbCarrera  .SelectedIndex = 0;
+                cmbCarrera.SelectedIndex = 0;
             }
         }
-
-
-
 
     }
 
