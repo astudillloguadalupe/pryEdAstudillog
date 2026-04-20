@@ -52,8 +52,6 @@ namespace pryEdAstudillog
                 MessageBox.Show("No hay Carreras Cargados para borrar");
                 return;
             }
-
-           
             clsArchivo x = new clsArchivo();
             x.NomArchivo = "Carrera.csv"; //csv excel
             x.Borrar(); 

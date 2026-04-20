@@ -138,17 +138,20 @@
             // 
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 117;
             // 
             // Deuda
             // 
             this.Deuda.HeaderText = "Deuda";
             this.Deuda.Name = "Deuda";
+            this.Deuda.ReadOnly = true;
             // 
             // frmClientes
             // 

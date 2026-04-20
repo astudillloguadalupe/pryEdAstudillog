@@ -47,10 +47,10 @@
             this.picCola = new System.Windows.Forms.PictureBox();
             this.lstListar = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grpListadoGrilla = new System.Windows.Forms.GroupBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Trámite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpListadoGrilla = new System.Windows.Forms.GroupBox();
             this.grpNuevo.SuspendLayout();
             this.grpEliminado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCola)).BeginInit();
@@ -242,27 +242,10 @@
             this.Trámite});
             this.dataGridView1.Location = new System.Drawing.Point(165, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(367, 173);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 75;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 157;
-            // 
-            // Trámite
-            // 
-            this.Trámite.HeaderText = "Trámite";
-            this.Trámite.Name = "Trámite";
-            this.Trámite.Width = 90;
             // 
             // grpListadoGrilla
             // 
@@ -274,6 +257,27 @@
             this.grpListadoGrilla.TabIndex = 3;
             this.grpListadoGrilla.TabStop = false;
             this.grpListadoGrilla.Text = "Listado en una Lista y una Grilla";
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 75;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 157;
+            // 
+            // Trámite
+            // 
+            this.Trámite.HeaderText = "Trámite";
+            this.Trámite.Name = "Trámite";
+            this.Trámite.ReadOnly = true;
+            this.Trámite.Width = 90;
             // 
             // frmCola
             // 

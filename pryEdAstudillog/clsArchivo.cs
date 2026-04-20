@@ -112,7 +112,7 @@ namespace pryEdAstudillog
 
             if (cmbCarrera .Items.Count > 0)
             {
-                cmbCarrera.SelectedIndex = 0;
+                cmbCarrera.SelectedIndex = -1;
             }
         }
 
