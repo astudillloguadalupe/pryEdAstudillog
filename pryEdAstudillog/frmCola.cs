@@ -31,6 +31,45 @@ namespace pryEdAstudillog
         {
            
         }
+        
+        clsCola ColaEspera = new clsCola();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo Persona = new clsNodo();
+            Persona.Codigo = Convert.ToInt32(txtCodigo1.Text);
+            Persona.Nombre = txtNombre1.Text;
+            Persona.Tramite = txtTramite1.Text;
 
+            ColaEspera.Agregar(Persona);
+            ColaEspera.Recorrer(dgvGrilla);
+            ColaEspera.Recorrer("Cola.csv");
+            ColaEspera.Recorrer(lstListar);
+
+            txtCodigo1.Text = "";
+            txtNombre1.Text = "";
+            txtTramite1.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (ColaEspera.Primero != null)
+            {
+                lblCod.Text = Convert.ToString(ColaEspera.Primero.Codigo);
+                lblNom.Text = ColaEspera.Primero.Nombre;
+                lblTra.Text = ColaEspera.Primero.Tramite;
+
+                ColaEspera.Eliminar();
+                ColaEspera.Recorrer(dgvGrilla);
+                ColaEspera.Recorrer("Cola.csv");
+                ColaEspera.Recorrer(lstListar);
+            }
+            else
+            {
+                lblCod.Text = "";
+                lblNom.Text = "";
+                lblTra.Text = "";
+                MessageBox.Show("No hay personas para eliminar en la cola");
+            }
+        }
     }
 }

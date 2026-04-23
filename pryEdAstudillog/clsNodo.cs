@@ -19,8 +19,8 @@ namespace pryEdAstudillog
 
         public Int32 Codigo
         { 
-            get { return cod; } 
-            set { cod = value; } 
+            get { return cod; } //tomo el valor de un campo
+            set { cod = value; } //asigno un valor a un campo
         }
         public String Nombre 
         { 
