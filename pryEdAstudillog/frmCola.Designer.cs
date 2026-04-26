@@ -84,6 +84,7 @@
             // 
             // txtNombre1
             // 
+            this.txtNombre1.Enabled = false;
             this.txtNombre1.Location = new System.Drawing.Point(76, 64);
             this.txtNombre1.Name = "txtNombre1";
             this.txtNombre1.Size = new System.Drawing.Size(100, 20);
@@ -92,13 +93,16 @@
             // 
             // txtTramite1
             // 
+            this.txtTramite1.Enabled = false;
             this.txtTramite1.Location = new System.Drawing.Point(73, 103);
             this.txtTramite1.Name = "txtTramite1";
             this.txtTramite1.Size = new System.Drawing.Size(103, 20);
             this.txtTramite1.TabIndex = 4;
+            this.txtTramite1.TextChanged += new System.EventHandler(this.txtTramite1_TextChanged);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(42, 137);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(102, 23);
@@ -294,6 +298,7 @@
             this.Name = "frmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cola";
+            this.Load += new System.EventHandler(this.frmCola_Load);
             this.grpNuevo.ResumeLayout(false);
             this.grpNuevo.PerformLayout();
             this.grpEliminado.ResumeLayout(false);

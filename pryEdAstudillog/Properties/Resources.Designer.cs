@@ -63,6 +63,26 @@ namespace pryEdAstudillog.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _01_ListasSimplementeEnlazadas {
+            get {
+                object obj = ResourceManager.GetObject("01 ListasSimplementeEnlazadas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2026_04_26_150357 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2026-04-26 150357", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cola {
             get {
                 object obj = ResourceManager.GetObject("cola", resourceCulture);

@@ -24,12 +24,26 @@ namespace pryEdAstudillog
 
         private void txtCodigo1_TextChanged(object sender, EventArgs e)
         {
-            
+            if (txtCodigo1.Text=="")
+            {
+                txtNombre1.Enabled = false;
+            }
+            else
+            {
+                txtNombre1.Enabled = true;
+            }
         }
 
         private void txtNombre1_TextChanged(object sender, EventArgs e)
         {
-           
+            if (txtNombre1.Text == "")
+            {
+                txtTramite1.Enabled = false;
+            }
+            else
+            {
+                txtTramite1.Enabled = true;
+            }
         }
         
         clsCola ColaEspera = new clsCola();
@@ -70,6 +84,23 @@ namespace pryEdAstudillog
                 lblTra.Text = "";
                 MessageBox.Show("No hay personas para eliminar en la cola");
             }
+        }
+
+        private void txtTramite1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTramite1.Text == "")
+            {
+                btnAgregar.Enabled = false;
+            }
+            else
+            {
+                btnAgregar.Enabled = true;
+            }
+        }
+
+        private void frmCola_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace pryEdAstudillog
 {
-    public partial class frmPila : Form
+    public partial class frmListaDoble : Form
     {
-        public frmPila()
+        public frmListaDoble()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
@@ -34,32 +29,32 @@ namespace pryEdAstudillog
             }
         }
 
-        private void frmPila_Load(object sender, EventArgs e)
+        private void frmListaDoble_Load(object sender, EventArgs e)
         {
 
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text=="")
+            if (txtNombre.Text == "")
             {
                 txtTramite.Enabled = false;
             }
             else
-            { 
-               txtTramite.Enabled = true; 
+            {
+                txtTramite.Enabled = true;
             }
         }
 
         private void txtTramite_TextChanged(object sender, EventArgs e)
         {
-            if (txtTramite.Text=="")
+            if (txtTramite.Text == "")
             {
-                btnAgregar.Enabled = false; 
+                btnAgregar.Enabled = false;
             }
             else
             {
-                btnAgregar.Enabled= true;
+                btnAgregar.Enabled = true;
             }
         }
     }
