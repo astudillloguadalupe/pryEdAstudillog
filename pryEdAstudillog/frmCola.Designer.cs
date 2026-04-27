@@ -280,7 +280,7 @@
             this.grpListadoGrilla.Controls.Add(this.lstListar);
             this.grpListadoGrilla.Location = new System.Drawing.Point(7, 184);
             this.grpListadoGrilla.Name = "grpListadoGrilla";
-            this.grpListadoGrilla.Size = new System.Drawing.Size(538, 201);
+            this.grpListadoGrilla.Size = new System.Drawing.Size(543, 201);
             this.grpListadoGrilla.TabIndex = 3;
             this.grpListadoGrilla.TabStop = false;
             this.grpListadoGrilla.Text = "Listado en una Lista y una Grilla";

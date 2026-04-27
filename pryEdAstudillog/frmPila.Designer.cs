@@ -46,7 +46,7 @@
             this.lblCodigoRTA = new System.Windows.Forms.Label();
             this.grpListado = new System.Windows.Forms.GroupBox();
             this.lstPila = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPila = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@
             this.grpNuevo.SuspendLayout();
             this.grpEliminado.SuspendLayout();
             this.grpListado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPila)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,9 +67,9 @@
             this.grpNuevo.Controls.Add(this.lblTramite);
             this.grpNuevo.Controls.Add(this.lblNombre);
             this.grpNuevo.Controls.Add(this.lblCodigo);
-            this.grpNuevo.Location = new System.Drawing.Point(186, 12);
+            this.grpNuevo.Location = new System.Drawing.Point(186, 6);
             this.grpNuevo.Name = "grpNuevo";
-            this.grpNuevo.Size = new System.Drawing.Size(185, 181);
+            this.grpNuevo.Size = new System.Drawing.Size(185, 187);
             this.grpNuevo.TabIndex = 0;
             this.grpNuevo.TabStop = false;
             this.grpNuevo.Text = "Nuevo elemento ";
@@ -92,6 +92,7 @@
             this.btnAgregar.TabIndex = 13;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -146,9 +147,9 @@
             this.grpEliminado.Controls.Add(this.label4);
             this.grpEliminado.Controls.Add(this.btnEliminar);
             this.grpEliminado.Controls.Add(this.lblCodigoRTA);
-            this.grpEliminado.Location = new System.Drawing.Point(377, 12);
+            this.grpEliminado.Location = new System.Drawing.Point(377, 6);
             this.grpEliminado.Name = "grpEliminado";
-            this.grpEliminado.Size = new System.Drawing.Size(173, 181);
+            this.grpEliminado.Size = new System.Drawing.Size(173, 187);
             this.grpEliminado.TabIndex = 0;
             this.grpEliminado.TabStop = false;
             this.grpEliminado.Text = "Elemento Eliminado ";
@@ -217,10 +218,10 @@
             // grpListado
             // 
             this.grpListado.Controls.Add(this.lstPila);
-            this.grpListado.Controls.Add(this.dataGridView1);
+            this.grpListado.Controls.Add(this.dgvPila);
             this.grpListado.Location = new System.Drawing.Point(12, 199);
             this.grpListado.Name = "grpListado";
-            this.grpListado.Size = new System.Drawing.Size(538, 213);
+            this.grpListado.Size = new System.Drawing.Size(538, 219);
             this.grpListado.TabIndex = 0;
             this.grpListado.TabStop = false;
             this.grpListado.Text = "Listado en una Lista y una Grilla";
@@ -233,17 +234,17 @@
             this.lstPila.Size = new System.Drawing.Size(162, 186);
             this.lstPila.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvPila
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
             this.Tramite});
-            this.dataGridView1.Location = new System.Drawing.Point(174, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(358, 186);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvPila.Location = new System.Drawing.Point(174, 19);
+            this.dgvPila.Name = "dgvPila";
+            this.dgvPila.Size = new System.Drawing.Size(358, 186);
+            this.dgvPila.TabIndex = 1;
             // 
             // Codigo
             // 
@@ -264,9 +265,9 @@
             // picPila
             // 
             this.picPila.Image = global::pryEdAstudillog.Properties.Resources.Captura_de_pantalla_2026_04_26_150357;
-            this.picPila.Location = new System.Drawing.Point(2, 12);
+            this.picPila.Location = new System.Drawing.Point(12, 6);
             this.picPila.Name = "picPila";
-            this.picPila.Size = new System.Drawing.Size(178, 181);
+            this.picPila.Size = new System.Drawing.Size(168, 187);
             this.picPila.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPila.TabIndex = 3;
             this.picPila.TabStop = false;
@@ -290,7 +291,7 @@
             this.grpEliminado.ResumeLayout(false);
             this.grpEliminado.PerformLayout();
             this.grpListado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPila)).EndInit();
             this.ResumeLayout(false);
 
@@ -301,7 +302,7 @@
         private System.Windows.Forms.GroupBox grpNuevo;
         private System.Windows.Forms.GroupBox grpEliminado;
         private System.Windows.Forms.GroupBox grpListado;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPila;
         private System.Windows.Forms.ListBox lstPila;
         private System.Windows.Forms.PictureBox picPila;
         private System.Windows.Forms.Label lblTramite;

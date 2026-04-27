@@ -43,9 +43,9 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpEliminado = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.picListaSimple = new System.Windows.Forms.PictureBox();
             this.grpNuevo.SuspendLayout();
             this.grpListado.SuspendLayout();
@@ -63,9 +63,9 @@
             this.grpNuevo.Controls.Add(this.lblTramite1);
             this.grpNuevo.Controls.Add(this.lblNombre1);
             this.grpNuevo.Controls.Add(this.lblCodigo1);
-            this.grpNuevo.Location = new System.Drawing.Point(174, 12);
+            this.grpNuevo.Location = new System.Drawing.Point(174, 5);
             this.grpNuevo.Name = "grpNuevo";
-            this.grpNuevo.Size = new System.Drawing.Size(185, 166);
+            this.grpNuevo.Size = new System.Drawing.Size(185, 173);
             this.grpNuevo.TabIndex = 1;
             this.grpNuevo.TabStop = false;
             this.grpNuevo.Text = "Nuevo Elemento";
@@ -140,9 +140,9 @@
             // 
             this.grpListado.Controls.Add(this.lstLista);
             this.grpListado.Controls.Add(this.dgvGrilla);
-            this.grpListado.Location = new System.Drawing.Point(6, 190);
+            this.grpListado.Location = new System.Drawing.Point(6, 184);
             this.grpListado.Name = "grpListado";
-            this.grpListado.Size = new System.Drawing.Size(538, 213);
+            this.grpListado.Size = new System.Drawing.Size(538, 219);
             this.grpListado.TabIndex = 4;
             this.grpListado.TabStop = false;
             this.grpListado.Text = "Listado en una Lista y una Grilla";
@@ -188,12 +188,20 @@
             this.grpEliminado.Controls.Add(this.comboBox1);
             this.grpEliminado.Controls.Add(this.lblCodigo2);
             this.grpEliminado.Controls.Add(this.btnEliminar);
-            this.grpEliminado.Location = new System.Drawing.Point(371, 12);
+            this.grpEliminado.Location = new System.Drawing.Point(371, 5);
             this.grpEliminado.Name = "grpEliminado";
-            this.grpEliminado.Size = new System.Drawing.Size(173, 166);
+            this.grpEliminado.Size = new System.Drawing.Size(173, 173);
             this.grpEliminado.TabIndex = 5;
             this.grpEliminado.TabStop = false;
             this.grpEliminado.Text = "Elemento a Eliminar";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(67, 67);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 16;
             // 
             // lblCodigo2
             // 
@@ -212,14 +220,6 @@
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(67, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 16;
             // 
             // picListaSimple
             // 
