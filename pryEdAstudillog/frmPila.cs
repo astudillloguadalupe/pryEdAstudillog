@@ -80,5 +80,27 @@ namespace pryEdAstudillog
             txtNombre.Text = "";
             txtTramite.Text = "";
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (objPila.Primero != null)
+            {
+                lblCodigoRTA.Text = Convert.ToString(objPila.Primero.Codigo);
+                lblNombreRTA.Text = objPila.Primero.Nombre;
+                lblTramiteRTA.Text = objPila.Primero.Tramite;
+
+                objPila.Eliminar();
+                objPila.Recorrer(dgvPila);
+                objPila.Recorrer("Pila.csv");
+                objPila.Recorrer(lstPila);
+            }
+            else
+            {
+                lblCodigoRTA.Text = "";
+                lblNombreRTA.Text = "";
+                lblTramiteRTA.Text = "";
+                MessageBox.Show("No hay personas para eliminar en la pila");
+            }
+        }
     }
 }

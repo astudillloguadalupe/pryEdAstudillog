@@ -192,5 +192,8 @@
   <ItemGroup>
     <None Include="Resources\01 ListasSimplementeEnlazadas.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista doble.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

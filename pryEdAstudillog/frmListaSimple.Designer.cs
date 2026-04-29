@@ -43,7 +43,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpEliminado = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.picListaSimple = new System.Windows.Forms.PictureBox();
@@ -105,6 +105,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite1
             // 
@@ -185,7 +186,7 @@
             // 
             // grpEliminado
             // 
-            this.grpEliminado.Controls.Add(this.comboBox1);
+            this.grpEliminado.Controls.Add(this.cmbCodigo);
             this.grpEliminado.Controls.Add(this.lblCodigo2);
             this.grpEliminado.Controls.Add(this.btnEliminar);
             this.grpEliminado.Location = new System.Drawing.Point(371, 5);
@@ -195,13 +196,14 @@
             this.grpEliminado.TabStop = false;
             this.grpEliminado.Text = "Elemento a Eliminar";
             // 
-            // comboBox1
+            // cmbCodigo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(67, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 16;
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(67, 67);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(100, 21);
+            this.cmbCodigo.TabIndex = 16;
+            this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbCodigo_SelectedIndexChanged);
             // 
             // lblCodigo2
             // 
@@ -272,7 +274,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.GroupBox grpEliminado;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCodigo;
         private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox picListaSimple;

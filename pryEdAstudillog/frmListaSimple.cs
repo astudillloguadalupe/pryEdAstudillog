@@ -52,5 +52,18 @@ namespace pryEdAstudillog
                 btnAgregar.Enabled = true;
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbCodigo.SelectedIndex == 0)
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
     }
 }
