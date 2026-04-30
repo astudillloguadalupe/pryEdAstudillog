@@ -52,18 +52,37 @@ namespace pryEdAstudillog
                 btnAgregar.Enabled = true;
             }
         }
-
+         clsListaSimple objLista = new clsListaSimple();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
+            clsNodo x = new clsNodo();
+            x.Codigo = Convert.ToInt32(txtCodigo1.Text);
+            x.Nombre = txtNombre1.Text;
+            x.Tramite = txtTramite1.Text;   
+
+            objLista.Agregar(x);
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(cmbCodigo);
+            objLista.Recorrer(dgvGrilla);
+
         }
+
 
         private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbCodigo.SelectedIndex == 0)
+            if(cmbCodigo.SelectedIndex == -1)
             {
-                btnAgregar.Enabled = false;
+                btnEliminar.Enabled = false;
             }
+            else            
+            {
+                btnEliminar.Enabled = true;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

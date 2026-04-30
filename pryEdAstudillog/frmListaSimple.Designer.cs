@@ -151,9 +151,9 @@
             // lstLista
             // 
             this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(6, 19);
+            this.lstLista.Location = new System.Drawing.Point(6, 14);
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(162, 186);
+            this.lstLista.Size = new System.Drawing.Size(162, 199);
             this.lstLista.TabIndex = 2;
             // 
             // dgvGrilla
@@ -163,9 +163,9 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dgvGrilla.Location = new System.Drawing.Point(174, 19);
+            this.dgvGrilla.Location = new System.Drawing.Point(174, 14);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(358, 186);
+            this.dgvGrilla.Size = new System.Drawing.Size(358, 199);
             this.dgvGrilla.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -198,7 +198,10 @@
             // 
             // cmbCodigo
             // 
+            this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Items.AddRange(new object[] {
+            "hola"});
             this.cmbCodigo.Location = new System.Drawing.Point(67, 67);
             this.cmbCodigo.Name = "cmbCodigo";
             this.cmbCodigo.Size = new System.Drawing.Size(100, 21);
@@ -216,19 +219,21 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Location = new System.Drawing.Point(46, 137);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(102, 23);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // picListaSimple
             // 
             this.picListaSimple.Image = global::pryEdAstudillog.Properties.Resources._01_ListasSimplementeEnlazadas;
-            this.picListaSimple.Location = new System.Drawing.Point(12, 12);
+            this.picListaSimple.Location = new System.Drawing.Point(6, 12);
             this.picListaSimple.Name = "picListaSimple";
-            this.picListaSimple.Size = new System.Drawing.Size(156, 166);
+            this.picListaSimple.Size = new System.Drawing.Size(162, 166);
             this.picListaSimple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picListaSimple.TabIndex = 6;
             this.picListaSimple.TabStop = false;
@@ -237,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 415);
+            this.ClientSize = new System.Drawing.Size(553, 415);
             this.Controls.Add(this.picListaSimple);
             this.Controls.Add(this.grpEliminado);
             this.Controls.Add(this.grpListado);

@@ -217,9 +217,9 @@
             // 
             this.grpListado.Controls.Add(this.lstLista);
             this.grpListado.Controls.Add(this.dgvGrilla);
-            this.grpListado.Location = new System.Drawing.Point(3, 199);
+            this.grpListado.Location = new System.Drawing.Point(3, 193);
             this.grpListado.Name = "grpListado";
-            this.grpListado.Size = new System.Drawing.Size(547, 213);
+            this.grpListado.Size = new System.Drawing.Size(547, 226);
             this.grpListado.TabIndex = 8;
             this.grpListado.TabStop = false;
             this.grpListado.Text = "Listado en una Lista y una Grilla";
@@ -229,7 +229,7 @@
             this.lstLista.FormattingEnabled = true;
             this.lstLista.Location = new System.Drawing.Point(6, 19);
             this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(162, 186);
+            this.lstLista.Size = new System.Drawing.Size(162, 199);
             this.lstLista.TabIndex = 2;
             // 
             // dgvGrilla
@@ -241,7 +241,7 @@
             this.tramite});
             this.dgvGrilla.Location = new System.Drawing.Point(174, 19);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(358, 186);
+            this.dgvGrilla.Size = new System.Drawing.Size(367, 198);
             this.dgvGrilla.TabIndex = 1;
             // 
             // codigo
@@ -265,7 +265,7 @@
             this.picDoble.Image = global::pryEdAstudillog.Properties.Resources.lista_doble;
             this.picDoble.Location = new System.Drawing.Point(3, 12);
             this.picDoble.Name = "picDoble";
-            this.picDoble.Size = new System.Drawing.Size(163, 185);
+            this.picDoble.Size = new System.Drawing.Size(163, 181);
             this.picDoble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDoble.TabIndex = 9;
             this.picDoble.TabStop = false;
@@ -274,7 +274,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 415);
+            this.ClientSize = new System.Drawing.Size(556, 422);
             this.Controls.Add(this.picDoble);
             this.Controls.Add(this.grpListado);
             this.Controls.Add(this.grpListarDatos);
