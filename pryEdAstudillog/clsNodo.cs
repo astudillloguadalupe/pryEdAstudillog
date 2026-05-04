@@ -15,6 +15,7 @@ namespace pryEdAstudillog
         private String nom;
         private String tram;
         private clsNodo sig;
+        private clsNodo ant;
 
 
         public Int32 Codigo
@@ -37,7 +38,11 @@ namespace pryEdAstudillog
             get { return sig; } 
             set { sig = value; } 
         }
-
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
     }
 
 }

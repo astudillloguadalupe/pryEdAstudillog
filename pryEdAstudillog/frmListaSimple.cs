@@ -64,6 +64,10 @@ namespace pryEdAstudillog
             objLista.Recorrer(lstLista);
             objLista.Recorrer(cmbCodigo);
             objLista.Recorrer(dgvGrilla);
+            txtCodigo1.Text = "";
+            txtNombre1.Text = "";
+            txtTramite1.Text = "";
+
 
         }
 
@@ -82,7 +86,20 @@ namespace pryEdAstudillog
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (objLista.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cmbCodigo.Text);
 
+                objLista.Eliminar(x);
+                objLista.Recorrer(dgvGrilla);
+                objLista.Recorrer(lstLista);
+                objLista.Recorrer(cmbCodigo);
+            }
+            else
+            {
+                MessageBox.Show("La lista esta vacio");
+            }
+            btnEliminar.Enabled = false;
         }
     }
 }
