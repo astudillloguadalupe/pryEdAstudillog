@@ -68,5 +68,24 @@ namespace pryEdAstudillog
         {
             
         }
+
+        clsListaDoble objLista = new clsListaDoble();
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+            x.Nombre = txtNombre.Text;
+            x.Tramite = txtTramite.Text;
+
+            objLista.Agregar(x);
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(cmbCodigo);
+            objLista.Recorrer(dgvGrilla);
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+
+        }
     }
 }
