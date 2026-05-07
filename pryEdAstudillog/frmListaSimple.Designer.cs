@@ -251,6 +251,7 @@
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Simple";
+            this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.grpNuevo.ResumeLayout(false);
             this.grpNuevo.PerformLayout();
             this.grpListado.ResumeLayout(false);

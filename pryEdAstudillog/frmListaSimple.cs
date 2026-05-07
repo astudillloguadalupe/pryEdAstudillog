@@ -68,7 +68,6 @@ namespace pryEdAstudillog
             txtNombre1.Text = "";
             txtTramite1.Text = "";
 
-
         }
 
 
@@ -100,6 +99,11 @@ namespace pryEdAstudillog
                 MessageBox.Show("La lista esta vacio");
             }
             btnEliminar.Enabled = false;
+        }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

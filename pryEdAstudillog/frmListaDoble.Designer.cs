@@ -46,10 +46,10 @@
             this.grpListado = new System.Windows.Forms.GroupBox();
             this.lstLista = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
+            this.picDoble = new System.Windows.Forms.PictureBox();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.picDoble = new System.Windows.Forms.PictureBox();
             this.grpNuevo.SuspendLayout();
             this.grpEliminado.SuspendLayout();
             this.grpListarDatos.SuspendLayout();
@@ -245,22 +245,6 @@
             this.dgvGrilla.Size = new System.Drawing.Size(367, 198);
             this.dgvGrilla.TabIndex = 1;
             // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 114;
-            // 
-            // tramite
-            // 
-            this.tramite.HeaderText = "Trámite";
-            this.tramite.Name = "tramite";
-            // 
             // picDoble
             // 
             this.picDoble.Image = global::pryEdAstudillog.Properties.Resources.lista_doble;
@@ -270,6 +254,23 @@
             this.picDoble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDoble.TabIndex = 9;
             this.picDoble.TabStop = false;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.Width = 105;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 120;
+            // 
+            // tramite
+            // 
+            this.tramite.HeaderText = "Trámite";
+            this.tramite.Name = "tramite";
             // 
             // frmListaDoble
             // 
@@ -319,9 +320,9 @@
         private System.Windows.Forms.GroupBox grpListado;
         private System.Windows.Forms.ListBox lstLista;
         private System.Windows.Forms.DataGridView dgvGrilla;
+        private System.Windows.Forms.PictureBox picDoble;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn tramite;
-        private System.Windows.Forms.PictureBox picDoble;
     }
 }

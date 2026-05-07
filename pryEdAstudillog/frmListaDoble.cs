@@ -58,9 +58,12 @@ namespace pryEdAstudillog
             }
         }
 
-       
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+           if (btnEliminar.Enabled)
+           {
+
+           }
             
         }
 
@@ -73,18 +76,12 @@ namespace pryEdAstudillog
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo x = new clsNodo();
-            x.Codigo = Convert.ToInt32(txtCodigo.Text);
-            x.Nombre = txtNombre.Text;
-            x.Tramite = txtTramite.Text;
+            clsNodo objNodo = new clsNodo();
+            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            objNodo.Nombre = txtNombre.Text;
+            objNodo.Tramite = txtTramite.Text;
 
-            objLista.Agregar(x);
-            objLista.Recorrer(lstLista);
-            objLista.Recorrer(cmbCodigo);
-            objLista.Recorrer(dgvGrilla);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            //seguir
 
         }
     }
