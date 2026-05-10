@@ -46,10 +46,10 @@
             this.grpListado = new System.Windows.Forms.GroupBox();
             this.lstLista = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
-            this.picDoble = new System.Windows.Forms.PictureBox();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.picDoble = new System.Windows.Forms.PictureBox();
             this.grpNuevo.SuspendLayout();
             this.grpEliminado.SuspendLayout();
             this.grpListarDatos.SuspendLayout();
@@ -201,6 +201,7 @@
             this.radDes.TabStop = true;
             this.radDes.Text = "Descendente";
             this.radDes.UseVisualStyleBackColor = true;
+            this.radDes.CheckedChanged += new System.EventHandler(this.radDes_CheckedChanged);
             // 
             // radAsc
             // 
@@ -213,6 +214,7 @@
             this.radAsc.TabStop = true;
             this.radAsc.Text = "Ascendente";
             this.radAsc.UseVisualStyleBackColor = true;
+            this.radAsc.CheckedChanged += new System.EventHandler(this.radAsc_CheckedChanged);
             // 
             // grpListado
             // 
@@ -245,16 +247,6 @@
             this.dgvGrilla.Size = new System.Drawing.Size(367, 198);
             this.dgvGrilla.TabIndex = 1;
             // 
-            // picDoble
-            // 
-            this.picDoble.Image = global::pryEdAstudillog.Properties.Resources.lista_doble;
-            this.picDoble.Location = new System.Drawing.Point(3, 12);
-            this.picDoble.Name = "picDoble";
-            this.picDoble.Size = new System.Drawing.Size(163, 181);
-            this.picDoble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picDoble.TabIndex = 9;
-            this.picDoble.TabStop = false;
-            // 
             // codigo
             // 
             this.codigo.HeaderText = "Código";
@@ -271,6 +263,16 @@
             // 
             this.tramite.HeaderText = "Trámite";
             this.tramite.Name = "tramite";
+            // 
+            // picDoble
+            // 
+            this.picDoble.Image = global::pryEdAstudillog.Properties.Resources.lista_doble;
+            this.picDoble.Location = new System.Drawing.Point(3, 12);
+            this.picDoble.Name = "picDoble";
+            this.picDoble.Size = new System.Drawing.Size(163, 181);
+            this.picDoble.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDoble.TabIndex = 9;
+            this.picDoble.TabStop = false;
             // 
             // frmListaDoble
             // 

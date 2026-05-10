@@ -95,6 +95,18 @@ namespace pryEdAstudillog
                 aux = aux.Siguiente;
             }
         }
+        public void Recorrer(ListBox lst)
+        {
+            clsNodo aux = Primero;
+            lst.Items.Clear();
+
+            while (aux != null)
+            {
+                lst.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+
         public void Eliminar(Int32 Codigo)
         {
             if (Primero.Codigo == Codigo && Ultimo == Primero)

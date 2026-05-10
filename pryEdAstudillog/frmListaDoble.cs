@@ -60,11 +60,18 @@ namespace pryEdAstudillog
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           if (btnEliminar.Enabled)
+           if (objLista.Primero != null)
            {
-
+               int codigo = Convert.ToInt32(cmbCodigo.Text);
+               objLista.Eliminar(codigo);
+               objLista.Recorrer(dgvGrilla);
+               objLista.Recorrer(lstLista);
+               objLista.Recorrer(cmbCodigo);
            }
-            
+           else
+            {
+                MessageBox.Show("No hay elementos para eliminar");
+            }
         }
 
         private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,8 +88,29 @@ namespace pryEdAstudillog
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
 
-            //seguir
+            objLista.Agregar(objNodo);
+            objLista.Recorrer(dgvGrilla);
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(cmbCodigo);
 
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
+
+        private void radAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            objLista.Recorrer(dgvGrilla);
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(cmbCodigo);
+        }
+
+        private void radDes_CheckedChanged(object sender, EventArgs e)
+        {
+
+            objLista.Recorrer(dgvGrilla);
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(cmbCodigo);
         }
     }
 }
