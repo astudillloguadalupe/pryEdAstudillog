@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO; //permite trabajar con archivos
 
 namespace pryEdAstudillog
 {
@@ -60,17 +61,25 @@ namespace pryEdAstudillog
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           if (objLista.Primero != null)
-           {
-               int codigo = Convert.ToInt32(cmbCodigo.Text);
-               objLista.Eliminar(codigo);
-               objLista.Recorrer(dgvGrilla);
-               objLista.Recorrer(lstLista);
-               objLista.Recorrer(cmbCodigo);
-           }
-           else
+            if (objLista.Primero != null)
             {
-                MessageBox.Show("No hay elementos para eliminar");
+                if (cmbCodigo.SelectedIndex != -1)
+                {
+                    int x = Convert.ToInt32(cmbCodigo.SelectedItem);
+                    objLista.Eliminar(x);
+
+                    objLista.Recorrer(dgvGrilla);
+                    objLista.Recorrer(lstLista);
+                    objLista.Recorrer(cmbCodigo);
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un código para eliminar");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para eliminar");
             }
         }
 
@@ -108,7 +117,7 @@ namespace pryEdAstudillog
         private void radDes_CheckedChanged(object sender, EventArgs e)
         {
 
-            objLista.Recorrer(dgvGrilla);
+            objLista.RecorrerDES(dgvGrilla);
             objLista.Recorrer(lstLista);
             objLista.Recorrer(cmbCodigo);
         }

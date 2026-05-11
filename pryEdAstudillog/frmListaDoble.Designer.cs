@@ -278,12 +278,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(556, 422);
             this.Controls.Add(this.picDoble);
             this.Controls.Add(this.grpListado);
             this.Controls.Add(this.grpListarDatos);
             this.Controls.Add(this.grpEliminado);
             this.Controls.Add(this.grpNuevo);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

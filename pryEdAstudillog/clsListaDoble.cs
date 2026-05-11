@@ -58,7 +58,7 @@ namespace pryEdAstudillog
                 }
             }
          }
-        public void Recorrer(DataGridView Grilla)
+        public void Recorrer(DataGridView Grilla) //ascendente
         {
             clsNodo aux = Primero;
             Grilla.Rows.Clear();
@@ -71,7 +71,7 @@ namespace pryEdAstudillog
             }
         }
 
-        public void RecorrerDES(DataGridView Grilla)
+        public void RecorrerDES(DataGridView Grilla) //descendente
         {
             clsNodo aux = Ultimo;
             Grilla.Rows.Clear();
@@ -112,11 +112,11 @@ namespace pryEdAstudillog
             if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
                 Primero = null;
-                Primero.Anterior = null;
+                Ultimo= null;
             }
             else
             {
-                if (Primero.Codigo ==Codigo)
+                if (Primero.Codigo == Codigo)
                 {
                     Primero = Primero.Siguiente;
                     Primero.Anterior = null;
@@ -133,7 +133,7 @@ namespace pryEdAstudillog
                     {
                          clsNodo aux = Primero;
                          clsNodo ant = Primero;
-                         while (aux.Codigo > Codigo)
+                         while (aux.Codigo < Codigo)
                          {
                             ant = aux;
                             aux = aux.Siguiente;
