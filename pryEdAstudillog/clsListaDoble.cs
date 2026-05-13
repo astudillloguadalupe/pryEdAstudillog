@@ -36,25 +36,35 @@ namespace pryEdAstudillog
             }
             else
             {
-                if (Nvo.Codigo> Ultimo.Codigo)
+                if (Nvo.Codigo < Primero.Codigo)
                 {
-                    Ultimo.Siguiente = Nvo;
-                    Nvo.Anterior = Ultimo;
-                    Ultimo= Nvo;
+                    Nvo.Siguiente = Primero;
+                    Primero.Anterior = Nvo;
+                    Primero = Nvo;
                 }
                 else
                 {
-                    clsNodo aux = Primero;
-                    clsNodo ant = Primero;
-                    while (aux.Codigo < Nvo.Codigo)
+                    if (Nvo.Codigo > Ultimo.Codigo)
                     {
-                        ant = aux;
-                        aux = aux.Siguiente;
+                        Ultimo.Siguiente = Nvo;
+                        Nvo.Anterior = Ultimo;
+                        Ultimo = Nvo;
                     }
-                    ant.Siguiente = aux;
-                    Nvo.Anterior = ant;
-                    Nvo.Siguiente = aux;
-                    aux.Anterior = Nvo;
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Nvo.Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        ant.Siguiente = aux;
+                        Nvo.Anterior = ant;
+                        Nvo.Siguiente = aux;
+                        aux.Anterior = Nvo;
+                    }
+                    
                 }
             }
          }
@@ -94,6 +104,24 @@ namespace pryEdAstudillog
                 cmb.Items.Add(aux.Codigo); // o lo que quieras mostrar
                 aux = aux.Siguiente;
             }
+        }
+
+        public void Recorrer(String NombreArchivo)
+        {
+            clsNodo aux = Primero;
+            StreamWriter AD = new StreamWriter(NombreArchivo, false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Siguiente;
+            }
+            AD.Close();
         }
         public void Recorrer(ListBox lst)
         {

@@ -72,10 +72,10 @@ namespace pryEdAstudillog
 
             while (aux != null)
             {
-                AD.WriteLine(aux.Codigo);
-                AD.WriteLine(";");
-                AD.WriteLine(aux.Nombre);
-                AD.WriteLine(";");
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
                 AD.WriteLine(aux.Tramite);
                 aux = aux.Siguiente;
             }
