@@ -80,6 +80,16 @@ namespace pryEdAstudillog
         {
             frmListaDoble v= new frmListaDoble(); v.ShowDialog();
         }
+
+        private void arbolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario v= new frmArbolBinario(); v.ShowDialog();
+        }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo v= new frmGrafo(); v.ShowDialog();
+        }
     }
 
 }

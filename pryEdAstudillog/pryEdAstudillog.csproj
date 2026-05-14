@@ -58,6 +58,12 @@
     <Compile Include="frmAlumnos.Designer.cs">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmArbolBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbolBinario.Designer.cs">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     <Compile Include="frmEstructuraDatos.Designer.cs">
       <DependentUpon>frmEstructuraDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGrafo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrafo.Designer.cs">
+      <DependentUpon>frmGrafo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaDoble.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,9 @@
     <EmbeddedResource Include="frmAlumnos.resx">
       <DependentUpon>frmAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmArbolBinario.resx">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarreras.resx">
       <DependentUpon>frmCarreras.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstructuraDatos.resx">
       <DependentUpon>frmEstructuraDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrafo.resx">
+      <DependentUpon>frmGrafo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
