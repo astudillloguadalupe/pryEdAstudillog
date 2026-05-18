@@ -16,5 +16,27 @@ namespace pryEdAstudillog
         {
             InitializeComponent();
         }
+
+        private void frmArbolBinario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo x = new clsNodo();
+            x.Codigo= Convert.ToInt32(txtCodigo.Text);
+            x.Nombre = txtNombre.Text;
+            x.Tramite = txtTramite.Text;
+
+            miArbol.Agregar(NuevoNodo);
+
+            miArbol.Recorrer(dgvGrilla);
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+            txtCodigo.Focus();
+        }
     }
 }

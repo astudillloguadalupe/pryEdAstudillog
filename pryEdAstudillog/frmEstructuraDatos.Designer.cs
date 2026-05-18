@@ -181,20 +181,11 @@
             this.estructurasNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
             this.estructurasNoLinealesToolStripMenuItem.Text = "Estructuras No Lineales";
             // 
-            // arbolToolStripMenuItem
+            
+        
             // 
-            this.arbolToolStripMenuItem.Name = "arbolToolStripMenuItem";
-            this.arbolToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.arbolToolStripMenuItem.Text = "Arbol...";
-            this.arbolToolStripMenuItem.Click += new System.EventHandler(this.arbolToolStripMenuItem_Click);
-            // 
-            // grafoToolStripMenuItem
-            // 
-            this.grafoToolStripMenuItem.BackgroundImage = global::pryEdAstudillog.Properties.Resources.WhatsApp_Image_2026_04_07_at_18_51_56;
-            this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.grafoToolStripMenuItem.Text = "Grafo...";
-            this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
+            
+            
             // 
             // frmEstructuraDatos
             // 

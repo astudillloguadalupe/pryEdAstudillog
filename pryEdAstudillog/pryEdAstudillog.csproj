@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsArbolBinario.cs" />
     <Compile Include="clsArchivo.cs" />
     <Compile Include="clsCola.cs" />
     <Compile Include="clsListaDoble.cs" />
@@ -100,12 +101,6 @@
     <Compile Include="frmEstructuraDatos.Designer.cs">
       <DependentUpon>frmEstructuraDatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGrafo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGrafo.Designer.cs">
-      <DependentUpon>frmGrafo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmListaDoble.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstructuraDatos.resx">
       <DependentUpon>frmEstructuraDatos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGrafo.resx">
-      <DependentUpon>frmGrafo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
