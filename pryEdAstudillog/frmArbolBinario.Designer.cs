@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.grpListado = new System.Windows.Forms.GroupBox();
+            this.radPostOrden = new System.Windows.Forms.RadioButton();
+            this.radPreOrden = new System.Windows.Forms.RadioButton();
+            this.radInOrden = new System.Windows.Forms.RadioButton();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +49,7 @@
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.radPostOrden = new System.Windows.Forms.RadioButton();
-            this.radPreOrden = new System.Windows.Forms.RadioButton();
-            this.radInOrden = new System.Windows.Forms.RadioButton();
+            this.trvArbol = new System.Windows.Forms.TreeView();
             this.grpListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.grpNuevo.SuspendLayout();
@@ -68,6 +68,39 @@
             this.grpListado.TabIndex = 9;
             this.grpListado.TabStop = false;
             this.grpListado.Text = "Listado de Arbol";
+            // 
+            // radPostOrden
+            // 
+            this.radPostOrden.AutoSize = true;
+            this.radPostOrden.Location = new System.Drawing.Point(20, 164);
+            this.radPostOrden.Name = "radPostOrden";
+            this.radPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.radPostOrden.TabIndex = 13;
+            this.radPostOrden.TabStop = true;
+            this.radPostOrden.Text = "Post-Orden";
+            this.radPostOrden.UseVisualStyleBackColor = true;
+            // 
+            // radPreOrden
+            // 
+            this.radPreOrden.AutoSize = true;
+            this.radPreOrden.Location = new System.Drawing.Point(20, 103);
+            this.radPreOrden.Name = "radPreOrden";
+            this.radPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.radPreOrden.TabIndex = 14;
+            this.radPreOrden.TabStop = true;
+            this.radPreOrden.Text = "Pre-Orden";
+            this.radPreOrden.UseVisualStyleBackColor = true;
+            // 
+            // radInOrden
+            // 
+            this.radInOrden.AutoSize = true;
+            this.radInOrden.Location = new System.Drawing.Point(20, 44);
+            this.radInOrden.Name = "radInOrden";
+            this.radInOrden.Size = new System.Drawing.Size(66, 17);
+            this.radInOrden.TabIndex = 15;
+            this.radInOrden.TabStop = true;
+            this.radInOrden.Text = "In-Orden";
+            this.radInOrden.UseVisualStyleBackColor = true;
             // 
             // dgvGrilla
             // 
@@ -223,52 +256,19 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // treeView1
+            // trvArbol
             // 
-            this.treeView1.Location = new System.Drawing.Point(3, 6);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(168, 181);
-            this.treeView1.TabIndex = 2;
-            // 
-            // radPostOrden
-            // 
-            this.radPostOrden.AutoSize = true;
-            this.radPostOrden.Location = new System.Drawing.Point(20, 164);
-            this.radPostOrden.Name = "radPostOrden";
-            this.radPostOrden.Size = new System.Drawing.Size(78, 17);
-            this.radPostOrden.TabIndex = 13;
-            this.radPostOrden.TabStop = true;
-            this.radPostOrden.Text = "Post-Orden";
-            this.radPostOrden.UseVisualStyleBackColor = true;
-            // 
-            // radPreOrden
-            // 
-            this.radPreOrden.AutoSize = true;
-            this.radPreOrden.Location = new System.Drawing.Point(20, 103);
-            this.radPreOrden.Name = "radPreOrden";
-            this.radPreOrden.Size = new System.Drawing.Size(73, 17);
-            this.radPreOrden.TabIndex = 14;
-            this.radPreOrden.TabStop = true;
-            this.radPreOrden.Text = "Pre-Orden";
-            this.radPreOrden.UseVisualStyleBackColor = true;
-            // 
-            // radInOrden
-            // 
-            this.radInOrden.AutoSize = true;
-            this.radInOrden.Location = new System.Drawing.Point(20, 44);
-            this.radInOrden.Name = "radInOrden";
-            this.radInOrden.Size = new System.Drawing.Size(66, 17);
-            this.radInOrden.TabIndex = 15;
-            this.radInOrden.TabStop = true;
-            this.radInOrden.Text = "In-Orden";
-            this.radInOrden.UseVisualStyleBackColor = true;
+            this.trvArbol.Location = new System.Drawing.Point(3, 6);
+            this.trvArbol.Name = "trvArbol";
+            this.trvArbol.Size = new System.Drawing.Size(168, 181);
+            this.trvArbol.TabIndex = 2;
             // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 422);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.trvArbol);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grpEliminado);
             this.Controls.Add(this.grpNuevo);
@@ -312,6 +312,6 @@
         private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView trvArbol;
     }
 }

@@ -22,6 +22,7 @@ namespace pryEdAstudillog
 
         }
 
+        clsArbolBinario Arbol = new clsArbolBinario();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsNodo x = new clsNodo();
@@ -29,14 +30,10 @@ namespace pryEdAstudillog
             x.Nombre = txtNombre.Text;
             x.Tramite = txtTramite.Text;
 
-            miArbol.Agregar(NuevoNodo);
-
-            miArbol.Recorrer(dgvGrilla);
-
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
-            txtCodigo.Focus();
+            Arbol.Agregar(x);
+            Arbol.Recorrer(dgvGrilla);
+            Arbol.Recorrer(trvArbol);
         }
     }
+
 }
