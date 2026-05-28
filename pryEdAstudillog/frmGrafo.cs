@@ -12,14 +12,87 @@ namespace pryEdAstudillog
 {
     public partial class frmGrafo : Form
     {
+        clsGrafo Grafo = new clsGrafo();
         public frmGrafo()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void frmGrafo_Load(object sender, EventArgs e)
         {
+            Grafo.MostrarCiudades(cmbOrigen1);
+            Grafo.MostrarCiudades(cmbDestino1);
 
+            Grafo.MostrarCiudades(cmbOrigen2);
+            Grafo.MostrarCiudades(cmbDestino2);
+
+            Grafo.MostrarCiudades(cmbDesde);
+            Grafo.MostrarCiudades(cmbHasta);
+
+            Grafo.MostrarTodo(dgvLista);
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            Int32 origen = cmbOrigen1.SelectedIndex;
+            Int32 destino = cmbDestino1.SelectedIndex;
+
+            Decimal precio = Convert.ToDecimal(txtPrecio.Text);
+
+            Grafo.Agregar(origen, destino, precio);
+
+            MessageBox.Show("Viaje cargado");
+
+            txtPrecio.Clear();
+
+            Grafo.MostrarTodo(dgvLista);
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Int32 origen = cmbOrigen2.SelectedIndex;
+            Int32 destino = cmbDestino2.SelectedIndex;
+
+            Decimal precio = Grafo.Consultar(origen, destino);
+
+            txtPrecio.Text = precio.ToString();
+        }
+
+        private void btnListarOrigenes_Click(object sender, EventArgs e)
+        {
+            Int32 destino = cmbHasta.SelectedIndex;
+
+            Grafo.MostrarOrigenes(destino, dgvLista);
+        }
+
+        private void btnVerViajes_Click(object sender, EventArgs e)
+        {
+            Grafo.MostrarTodo(dgvLista);
+        }
+
+        private void btnListarDestinos_Click(object sender, EventArgs e)
+        {
+            Int32 origen = cmbDesde.SelectedIndex;
+
+            Grafo.MostrarDestinos(origen, dgvLista);
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            cmbOrigen1.SelectedIndex = 0;
+            cmbDestino1.SelectedIndex = 0;
+
+            txtPrecio.Clear();
+
+            cmbOrigen1.Focus();
+        }
+
+        private void btnBorrarTodo_Click(object sender, EventArgs e)
+        {
+            Grafo.BorrarTodo();
+            Grafo.MostrarTodo(dgvLista);
+
+            MessageBox.Show("Se borraron todos los viajes.");
         }
     }
 }

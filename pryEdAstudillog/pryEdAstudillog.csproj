@@ -49,6 +49,7 @@
     <Compile Include="clsArbolBinario.cs" />
     <Compile Include="clsArchivo.cs" />
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsGrafo.cs" />
     <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
@@ -196,6 +197,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Grafo" />
     <None Include="Resources\WhatsApp Image 2026-04-07 at 18.51.56.jpeg" />
   </ItemGroup>
   <ItemGroup>

@@ -32,7 +32,7 @@ namespace pryEdAstudillog
 
             Arbol.Agregar(x);
             Arbol.Recorrer(dgvGrilla);
-            Arbol.Recorrer(trvArbol);
+            //Arbol.Recorrer(trvArbol);
         }
     }
 

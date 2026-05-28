@@ -93,6 +93,16 @@ namespace pryEdAstudillog.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Grafo {
+            get {
+                object obj = ResourceManager.GetObject("Grafo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lista_doble {
             get {
                 object obj = ResourceManager.GetObject("lista doble", resourceCulture);

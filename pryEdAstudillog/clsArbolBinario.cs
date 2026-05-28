@@ -151,3 +151,5 @@ namespace pryEdAstudillog
             grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
     }
+
+}
