@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsArbolBinario.cs" />
     <Compile Include="clsArchivo.cs" />
+    <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsCola.cs" />
     <Compile Include="clsGrafo.cs" />
     <Compile Include="clsListaDoble.cs" />
@@ -65,6 +66,30 @@
     </Compile>
     <Compile Include="frmArbolBinario.Designer.cs">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdConsultaSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdConsultaSQL.Designer.cs">
+      <DependentUpon>frmBdConsultaSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdConsultaTablas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdConsultaTablas.Designer.cs">
+      <DependentUpon>frmBdConsultaTablas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdOperaciones.Designer.cs">
+      <DependentUpon>frmBdOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBdRepaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBdRepaso.Designer.cs">
+      <DependentUpon>frmBdRepaso.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarreras.cs">
       <SubType>Form</SubType>
@@ -139,6 +164,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmArbolBinario.resx">
       <DependentUpon>frmArbolBinario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdConsultaSQL.resx">
+      <DependentUpon>frmBdConsultaSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdConsultaTablas.resx">
+      <DependentUpon>frmBdConsultaTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdOperaciones.resx">
+      <DependentUpon>frmBdOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBdRepaso.resx">
+      <DependentUpon>frmBdRepaso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarreras.resx">
       <DependentUpon>frmCarreras.cs</DependentUpon>
@@ -217,6 +254,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lista doble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libreria.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
