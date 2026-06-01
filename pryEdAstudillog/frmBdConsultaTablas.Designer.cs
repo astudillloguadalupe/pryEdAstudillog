@@ -96,6 +96,7 @@
             this.Controls.Add(this.dgvConsultaTabla);
             this.Name = "frmBdConsultaTablas";
             this.Text = "Consulta de una tabla";
+            this.Load += new System.EventHandler(this.frmBdConsultaTablas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

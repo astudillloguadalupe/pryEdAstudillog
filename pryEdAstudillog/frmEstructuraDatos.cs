@@ -90,6 +90,11 @@ namespace pryEdAstudillog
         {
             frmGrafo v = new frmGrafo(); v.ShowDialog();
         }
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaTablas v = new frmBdConsultaTablas(); v.ShowDialog();
+        }
     }
 
 }

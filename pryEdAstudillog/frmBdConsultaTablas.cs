@@ -17,10 +17,16 @@ namespace pryEdAstudillog
             InitializeComponent();
         }
 
+  
         private void btnListar_Click(object sender, EventArgs e)
         {
             clsBaseDatos bd = new clsBaseDatos();
             bd.Listar(cmbTablas.Text, dgvConsultaTabla);
+        }
+
+        private void frmBdConsultaTablas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
