@@ -23,12 +23,12 @@ namespace pryEdAstudillog
         {
             try
             {
-                conexion.ConnectionString = CadenaConexion1;
+                conexion.ConnectionString = CadenaConexion2;
                 conexion.Open();
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "Libro";
+                comando.CommandText = "SELECT * FROM Libro";
 
                 DataSet Ds = new DataSet();
                 adaptador = new OleDbDataAdapter(comando);
@@ -55,7 +55,7 @@ namespace pryEdAstudillog
 
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = tabla;
+                comando.CommandText = "SELECT * FROM " + tabla;
 
                 DataSet Ds = new DataSet();
                 adaptador = new OleDbDataAdapter(comando);
@@ -78,7 +78,7 @@ namespace pryEdAstudillog
         {
             try
             {
-                conexion.ConnectionString = CadenaConexion1;
+                conexion.ConnectionString = CadenaConexion2;
                 conexion.Open();
 
                 comando.Connection = conexion;

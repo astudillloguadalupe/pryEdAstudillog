@@ -94,7 +94,9 @@
             this.Controls.Add(this.cmbTablas);
             this.Controls.Add(this.lblTabla);
             this.Controls.Add(this.dgvConsultaTabla);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBdConsultaTablas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de una tabla";
             this.Load += new System.EventHandler(this.frmBdConsultaTablas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaTabla)).EndInit();

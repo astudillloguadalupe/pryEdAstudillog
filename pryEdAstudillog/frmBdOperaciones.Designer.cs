@@ -171,6 +171,7 @@
             this.btnProyMulti.TabIndex = 1;
             this.btnProyMulti.Text = "Proyección multiatributo";
             this.btnProyMulti.UseVisualStyleBackColor = true;
+            this.btnProyMulti.Click += new System.EventHandler(this.btnProyMulti_Click);
             // 
             // btnProySimple
             // 
@@ -181,6 +182,7 @@
             this.btnProySimple.TabIndex = 0;
             this.btnProySimple.Text = "Proyección simple";
             this.btnProySimple.UseVisualStyleBackColor = true;
+            this.btnProySimple.Click += new System.EventHandler(this.btnProySimple_Click);
             // 
             // dgvBaseDatos
             // 

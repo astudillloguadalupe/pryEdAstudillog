@@ -16,5 +16,21 @@ namespace pryEdAstudillog
         {
             InitializeComponent();
         }
+        clsBaseDatos objBaseDatos = new clsBaseDatos();
+        private void btnProySimple_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO " +
+                "FROM LIBRO" + 
+                "ORDEN BY 1 DESC";
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
+
+        private void btnProyMulti_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO, AÑO " +
+                "FROM LIBRO" +
+                "ORDEN BY TITULO ASC";
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
     }
 }

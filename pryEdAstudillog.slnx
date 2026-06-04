@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="pryEdAstudillog/pryEdAstudillog.csproj" Id="134e2edf-9595-4382-bc27-c77aa09ffaf3" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="pryEdAstudillog/pryEdAstudillog.csproj" Id="134e2edf-9595-4382-bc27-c77aa09ffaf3">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

@@ -16,5 +16,12 @@ namespace pryEdAstudillog
         {
             InitializeComponent();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(dgvConsulta, txtConsulta.Text);
+
+        }
     }
 }

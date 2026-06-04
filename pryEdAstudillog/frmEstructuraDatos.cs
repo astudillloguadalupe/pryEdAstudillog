@@ -95,6 +95,11 @@ namespace pryEdAstudillog
         {
             frmBdConsultaTablas v = new frmBdConsultaTablas(); v.ShowDialog();
         }
+
+        private void consultaDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdConsultaSQL v = new frmBdConsultaSQL(); v.ShowDialog();    
+        }
     }
 
 }
