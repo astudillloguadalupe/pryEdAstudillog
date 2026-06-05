@@ -100,6 +100,11 @@ namespace pryEdAstudillog
         {
             frmBdConsultaSQL v = new frmBdConsultaSQL(); v.ShowDialog();    
         }
+
+        private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBdOperaciones v = new frmBdOperaciones(); v.ShowDialog();
+        }
     }
 
 }

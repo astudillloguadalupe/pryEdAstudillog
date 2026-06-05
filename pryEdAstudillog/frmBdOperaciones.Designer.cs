@@ -71,6 +71,7 @@
             this.btnDiferencia.TabIndex = 2;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -81,6 +82,7 @@
             this.btnInterseccion.TabIndex = 1;
             this.btnInterseccion.Text = "Intersección";
             this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
             // btnUnion
             // 
@@ -91,6 +93,7 @@
             this.btnUnion.TabIndex = 0;
             this.btnUnion.Text = "Unión";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // grbSeleccion
             // 
@@ -116,6 +119,7 @@
             this.btnSelecConv.TabIndex = 2;
             this.btnSelecConv.Text = "Selección por convolución";
             this.btnSelecConv.UseVisualStyleBackColor = true;
+            this.btnSelecConv.Click += new System.EventHandler(this.btnSelecConv_Click);
             // 
             // btnSelecMulti
             // 
@@ -161,6 +165,7 @@
             this.btnJuntar.TabIndex = 2;
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnProyMulti
             // 
@@ -204,7 +209,9 @@
             this.Controls.Add(this.grbSeleccion);
             this.Controls.Add(this.grbProyeccion);
             this.Controls.Add(this.dgvBaseDatos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBdOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de Datos";
             this.grbAlgebraicas.ResumeLayout(false);
             this.grbSeleccion.ResumeLayout(false);

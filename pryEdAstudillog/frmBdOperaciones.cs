@@ -32,5 +32,57 @@ namespace pryEdAstudillog
                 "ORDEN BY TITULO ASC";
             objBaseDatos.Listar(dgvBaseDatos, varSQL);
         }
+
+        private void btnSelecConv_Click(object sender, EventArgs e)
+        {
+
+            String varSQL = "SELECT * " +
+                "FROM (select * from libro where idIdioma > 1) as X " +
+                "WHERE IDPAIS = 2 ";
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
+
+        private void btnJuntar_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT TITULO NOMBRE " +
+              "from LIBRO inner join PAIS " +
+              "on LIBRO,IDPAIS = PAIS.IDPAIS";
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
+
+        private void btnInterseccion_Click(object sender, EventArgs e)
+        {
+            String varSQL = "Select * from libro " +
+                    " where idIdioma = 2 and " +
+                    "idLibro in " +
+                    "(Select idlibro from libro where IdPais = 3 )" +
+                    " order by 1 asc ";
+
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
+
+        private void btnDiferencia_Click(object sender, EventArgs e)
+        {
+            String varSQL = "Select * from libro " +
+                    " where idIdioma = 2 and " +
+                    "idLibro not in " +
+                    "(Select idlibro from libro where IdPais = 3 )" +
+                    " order by 1 asc ";
+
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
+
+        private void btnUnion_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT * " +
+                    "FROM LIBRO " +
+                    "WHERE IDIDIOMA = 1 " +
+                    "UNION " +
+                    "SELECT * " +
+                    "FROM LIBRO " +
+                    "WHERE IDIDIOMA = 2";
+
+            objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
     }
 }
