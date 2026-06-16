@@ -23,7 +23,7 @@ namespace pryEdAstudillog
         {
             try
             {
-                conexion.ConnectionString = CadenaConexion2;
+                conexion.ConnectionString = CadenaConexion1;
                 conexion.Open();
 
                 comando.Connection = conexion;
@@ -50,7 +50,7 @@ namespace pryEdAstudillog
         {
             try
             {
-                conexion.ConnectionString = CadenaConexion2;
+                conexion.ConnectionString = CadenaConexion1;
                 conexion.Open();
 
                 comando.Connection = conexion;
@@ -78,7 +78,7 @@ namespace pryEdAstudillog
         {
             try
             {
-                conexion.ConnectionString = CadenaConexion2;
+                conexion.ConnectionString = CadenaConexion1;
                 conexion.Open();
 
                 comando.Connection = conexion;
@@ -101,13 +101,6 @@ namespace pryEdAstudillog
 
             }
         }
-
-     
-    
-
-
-
-
 
     }
 }

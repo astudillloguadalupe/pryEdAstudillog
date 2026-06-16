@@ -20,16 +20,16 @@ namespace pryEdAstudillog
         private void btnProySimple_Click(object sender, EventArgs e)
         {
             String varSQL = "SELECT TITULO " +
-                "FROM LIBRO" + 
-                "ORDEN BY 1 DESC";
+                "FROM LIBRO " + 
+                "ORDER BY 1 DESC";
             objBaseDatos.Listar(dgvBaseDatos, varSQL);
         }
 
         private void btnProyMulti_Click(object sender, EventArgs e)
         {
             String varSQL = "SELECT TITULO, AÑO " +
-                "FROM LIBRO" +
-                "ORDEN BY TITULO ASC";
+                "FROM LIBRO " +
+                "ORDER BY TITULO ASC";
             objBaseDatos.Listar(dgvBaseDatos, varSQL);
         }
 
@@ -44,9 +44,9 @@ namespace pryEdAstudillog
 
         private void btnJuntar_Click(object sender, EventArgs e)
         {
-            String varSQL = "SELECT TITULO NOMBRE " +
+            String varSQL = "SELECT LIBRO.TITULO, PAIS.NOMBRE " +
               "from LIBRO inner join PAIS " +
-              "on LIBRO,IDPAIS = PAIS.IDPAIS";
+              "ON LIBRO.IDPAIS = PAIS.IDPAIS";
             objBaseDatos.Listar(dgvBaseDatos, varSQL);
         }
 
@@ -83,6 +83,11 @@ namespace pryEdAstudillog
                     "WHERE IDIDIOMA = 2";
 
             objBaseDatos.Listar(dgvBaseDatos, varSQL);
+        }
+
+        private void frmBdOperaciones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
