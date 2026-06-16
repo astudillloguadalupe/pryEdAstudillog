@@ -19,9 +19,9 @@ namespace pryEdAstudillog
         {
             Precio[f, c] = p;
         }
-        public void Eliminar (Int32 f, Int32 c, Decimal p)
+        public void Eliminar(Int32 f, Int32 c)
         {
-            Precio[f, c] = 0; 
+            Precio[f, c] = 0;
         }
         public Decimal Consultar (Int32 f, Int32 c)
         {

@@ -55,7 +55,15 @@ namespace pryEdAstudillog
 
             Decimal precio = Grafo.Consultar(origen, destino);
 
-            txtPrecio.Text = precio.ToString();
+            if (precio == 0)
+            {
+                MessageBox.Show("No existe un viaje cargado entre esas ciudades.");
+                txtPrecio.Text = "";
+            }
+            else
+            {
+                lblPrecioRTA.Text = precio.ToString();
+            }
         }
 
         private void btnListarOrigenes_Click(object sender, EventArgs e)
@@ -79,12 +87,16 @@ namespace pryEdAstudillog
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            cmbOrigen1.SelectedIndex = 0;
-            cmbDestino1.SelectedIndex = 0;
+            Int32 origen = cmbOrigen2.SelectedIndex;
+            Int32 destino = cmbDestino2.SelectedIndex;
 
-            txtPrecio.Clear();
+            Grafo.Eliminar(origen, destino);
 
-            cmbOrigen1.Focus();
+            txtPrecio.Text = "";
+
+            Grafo.MostrarTodo(dgvLista);
+
+            MessageBox.Show("El viaje seleccionado fue eliminado correctamente.");
         }
 
         private void btnBorrarTodo_Click(object sender, EventArgs e)
