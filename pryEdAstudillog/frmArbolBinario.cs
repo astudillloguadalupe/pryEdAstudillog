@@ -25,12 +25,22 @@ namespace pryEdAstudillog
         clsArbolBinario Arbol = new clsArbolBinario();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (txtCodigo.Text == "" ||
+        txtNombre.Text == "" ||
+        txtTramite.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos.");
+                return;
+            }
+
             clsNodo x = new clsNodo();
-            x.Codigo= Convert.ToInt32(txtCodigo.Text);
+
+            x.Codigo = Convert.ToInt32(txtCodigo.Text);
             x.Nombre = txtNombre.Text;
             x.Tramite = txtTramite.Text;
 
             Arbol.Agregar(x);
+
             Arbol.Recorrer(dgvGrilla);
             Arbol.Recorrer(cmbCodigo);
             Arbol.PreOrden(trvArbol);
@@ -38,7 +48,6 @@ namespace pryEdAstudillog
             txtCodigo.Clear();
             txtNombre.Clear();
             txtTramite.Clear();
-            txtCodigo.Focus();
         }
 
         private void radInOrden_CheckedChanged(object sender, EventArgs e)
@@ -100,6 +109,24 @@ namespace pryEdAstudillog
             Arbol.Recorrer(dgvGrilla);
             Arbol.Recorrer(cmbCodigo);
             Arbol.PreOrden(trvArbol);
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Validar();
+        }
+        private void Validar()
+        {
+            btnAgregar.Enabled =
+            txtCodigo.Text != "" &&
+            txtNombre.Text != "" &&
+            txtTramite.Text != "";
+            
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            Validar();
         }
     }
 
