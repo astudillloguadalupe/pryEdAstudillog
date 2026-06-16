@@ -150,6 +150,97 @@ namespace pryEdAstudillog
 
             grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
+
+        public void Eliminar(int codigo)
+        {
+            Raiz = EliminarNodo(Raiz, codigo);
+        }
+
+        private clsNodo EliminarNodo(clsNodo R, int codigo)
+        {
+            if (R == null)
+            {
+                MessageBox.Show("El código no existe en el árbol.");
+                return null;
+            }
+
+            if (codigo < R.Codigo)
+            {
+                R.Izquierdo = EliminarNodo(R.Izquierdo, codigo);
+            }
+            else if (codigo > R.Codigo)
+            {
+                R.Derecho = EliminarNodo(R.Derecho, codigo);
+            }
+            else
+            {
+                if (R.Izquierdo == null && R.Derecho == null)
+                    return null;
+
+                if (R.Izquierdo == null)
+                    return R.Derecho;
+
+                if (R.Derecho == null)
+                    return R.Izquierdo;
+
+                clsNodo sucesor = BuscarMinimo(R.Derecho);
+
+                R.Codigo = sucesor.Codigo;
+                R.Nombre = sucesor.Nombre;
+                R.Tramite = sucesor.Tramite;
+
+                R.Derecho = EliminarNodo(R.Derecho, sucesor.Codigo);
+            }
+
+            return R;
+        }
+
+        private clsNodo BuscarMinimo(clsNodo R)
+        {
+            while (R.Izquierdo != null)
+            {
+                R = R.Izquierdo;
+            }
+
+            return R;
+        }
+        public void Equilibrar()
+        {
+            int cantidad = ContarNodos(Raiz);
+
+            if (cantidad <= 1) return;
+
+            clsNodo[] vector = new clsNodo[cantidad];
+            int indice = 0;
+
+            InOrdenAsc(vector, ref indice, Raiz);
+
+            Raiz = null;
+
+            InsertarBalanceado(vector, 0, cantidad - 1);
+        }
+
+        private int ContarNodos(clsNodo R)
+        {
+            if (R == null) return 0;
+
+            return 1 + ContarNodos(R.Izquierdo) + ContarNodos(R.Derecho);
+        }
+
+        private void InsertarBalanceado(clsNodo[] vector, int inicio, int fin)
+        {
+            if (inicio > fin) return;
+
+            int medio = (inicio + fin) / 2;
+
+            vector[medio].Izquierdo = null;
+            vector[medio].Derecho = null;
+
+            Agregar(vector[medio]);
+
+            InsertarBalanceado(vector, inicio, medio - 1);
+            InsertarBalanceado(vector, medio + 1, fin);
+        }
     }
 
 }
