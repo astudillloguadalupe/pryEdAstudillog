@@ -103,6 +103,11 @@ namespace pryEdAstudillog
 
         private void consultasVariasConOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmBdRepaso v = new frmBdRepaso(); v.ShowDialog();
+        }
+
+        private void operacionesEnBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmBdOperaciones v = new frmBdOperaciones(); v.ShowDialog();
         }
     }
