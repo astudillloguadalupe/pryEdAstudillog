@@ -92,19 +92,31 @@ namespace pryEdAstudillog
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!Int32.TryParse(txtCodigo.Text, out Int32 codigo))
+            {
+                MessageBox.Show("El código debe ser numérico.");
+                txtCodigo.Focus();
+                return;
+            }
+
             clsNodo objNodo = new clsNodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+
+            objNodo.Codigo = codigo;
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
 
             objLista.Agregar(objNodo);
-            objLista.Recorrer(dgvGrilla);
-            objLista.Recorrer(lstLista);
-            objLista.Recorrer(cmbCodigo);
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            objLista.Recorrer(lstLista);
+            objLista.Recorrer(dgvGrilla);
+
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+
+            txtCodigo.Focus();
+
+
         }
 
         private void radAsc_CheckedChanged(object sender, EventArgs e)

@@ -80,6 +80,17 @@ namespace pryEdAstudillog
                 aux = aux.Siguiente;
             }
         }
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo aux = Primero;
+            Combo.Items.Clear();
+
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Nombre);
+                aux = aux.Siguiente;
+            }
+        }
 
         public void Recorrer(String NombreArchivo)
         {

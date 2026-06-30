@@ -45,9 +45,9 @@ namespace pryEdAstudillog
                             break;
                         }
                    }
-                    aux.Siguiente = Nuevo;
+                    ant.Siguiente = Nuevo;
                     Nuevo.Siguiente = aux;
-                    
+
                 }
             }
         }

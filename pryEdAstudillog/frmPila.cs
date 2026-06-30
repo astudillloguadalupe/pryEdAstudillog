@@ -66,19 +66,29 @@ namespace pryEdAstudillog
         clsPila objPila = new clsPila();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!Int32.TryParse(txtCodigo.Text, out Int32 codigo))
+            {
+                MessageBox.Show("El código debe ser numérico.");
+                txtCodigo.Focus();
+                return;
+            }
+
             clsNodo x = new clsNodo();
-            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+
+            x.Codigo = codigo;
             x.Nombre = txtNombre.Text;
             x.Tramite = txtTramite.Text;
 
             objPila.Agregar(x);
-            objPila.Recorrer(dgvPila);
-            objPila.Recorrer(lstPila);
-            objPila.Recorrer("Pila.csv");
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            objPila.Recorrer(lstPila);
+            objPila.Recorrer(dgvPila);
+
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+
+            txtCodigo.Focus();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

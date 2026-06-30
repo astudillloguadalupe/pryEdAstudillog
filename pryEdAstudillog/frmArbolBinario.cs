@@ -26,8 +26,8 @@ namespace pryEdAstudillog
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (txtCodigo.Text == "" ||
-        txtNombre.Text == "" ||
-        txtTramite.Text == "")
+            txtNombre.Text == "" ||
+            txtTramite.Text == "")
             {
                 MessageBox.Show("Debe completar todos los campos.");
                 return;
@@ -35,7 +35,16 @@ namespace pryEdAstudillog
 
             clsNodo x = new clsNodo();
 
-            x.Codigo = Convert.ToInt32(txtCodigo.Text);
+            if (!int.TryParse(txtCodigo.Text, out int codigo))
+            {
+                MessageBox.Show("El código debe ser numérico.");
+                txtCodigo.Focus();
+                return;
+            }
+
+            
+
+            x.Codigo = codigo;
             x.Nombre = txtNombre.Text;
             x.Tramite = txtTramite.Text;
 
@@ -125,6 +134,11 @@ namespace pryEdAstudillog
         }
 
         private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            Validar();
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
             Validar();
         }

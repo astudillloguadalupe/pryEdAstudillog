@@ -37,7 +37,18 @@ namespace pryEdAstudillog
             Int32 origen = cmbOrigen1.SelectedIndex;
             Int32 destino = cmbDestino1.SelectedIndex;
 
-            Decimal precio = Convert.ToDecimal(txtPrecio.Text);
+            if (origen == -1 || destino == -1)
+            {
+                MessageBox.Show("Seleccione origen y destino.");
+                return;
+            }
+
+            if (!Decimal.TryParse(txtPrecio.Text, out Decimal precio))
+            {
+                MessageBox.Show("Ingrese un precio válido.");
+                txtPrecio.Focus();
+                return;
+            }
 
             Grafo.Agregar(origen, destino, precio);
 

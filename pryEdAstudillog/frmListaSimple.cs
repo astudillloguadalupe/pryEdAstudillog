@@ -55,18 +55,31 @@ namespace pryEdAstudillog
          clsListaSimple objLista = new clsListaSimple();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
+            if (!Int32.TryParse(txtCodigo1.Text, out Int32 codigo))
+            {
+                MessageBox.Show("El código debe ser numérico.");
+                txtCodigo1.Focus();
+                return;
+            }
+
             clsNodo x = new clsNodo();
-            x.Codigo = Convert.ToInt32(txtCodigo1.Text);
+
+            x.Codigo = codigo;
             x.Nombre = txtNombre1.Text;
-            x.Tramite = txtTramite1.Text;   
+            x.Tramite = txtTramite1.Text;
 
             objLista.Agregar(x);
+
             objLista.Recorrer(lstLista);
             objLista.Recorrer(cmbCodigo);
             objLista.Recorrer(dgvGrilla);
-            txtCodigo1.Text = "";
-            txtNombre1.Text = "";
-            txtTramite1.Text = "";
+
+            txtCodigo1.Clear();
+            txtNombre1.Clear();
+            txtTramite1.Clear();
+
+            txtCodigo1.Focus();
 
         }
 

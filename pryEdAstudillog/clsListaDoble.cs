@@ -59,10 +59,10 @@ namespace pryEdAstudillog
                             ant = aux;
                             aux = aux.Siguiente;
                         }
-                        ant.Siguiente = aux;
-                        Nvo.Anterior = ant;
+                        ant.Siguiente = Nvo;
                         Nvo.Siguiente = aux;
                         aux.Anterior = Nvo;
+                        Nvo.Anterior = ant;
                     }
                     
                 }

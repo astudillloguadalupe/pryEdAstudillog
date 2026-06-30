@@ -49,19 +49,34 @@ namespace pryEdAstudillog
         clsCola ColaEspera = new clsCola();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!Int32.TryParse(txtCodigo1.Text, out Int32 codigo))
+            {
+                MessageBox.Show("El código debe ser numérico.");
+                txtCodigo1.Focus();
+                return;
+            }
+
             clsNodo Persona = new clsNodo();
-            Persona.Codigo = Convert.ToInt32(txtCodigo1.Text);
+
+            Persona.Codigo = codigo;
             Persona.Nombre = txtNombre1.Text;
             Persona.Tramite = txtTramite1.Text;
 
             ColaEspera.Agregar(Persona);
+
             ColaEspera.Recorrer(dgvGrilla);
             ColaEspera.Recorrer("Cola.csv");
             ColaEspera.Recorrer(lstListar);
 
-            txtCodigo1.Text = "";
-            txtNombre1.Text = "";
-            txtTramite1.Text = "";
+            txtCodigo1.Clear();
+            txtNombre1.Clear();
+            txtTramite1.Clear();
+
+            txtNombre1.Enabled = false;
+            txtTramite1.Enabled = false;
+            btnAgregar.Enabled = false;
+
+            txtCodigo1.Focus();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
